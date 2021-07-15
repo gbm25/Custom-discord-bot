@@ -27,7 +27,7 @@ async def set_satisfactory_channel(ctx, satis_channel):
     # await ctx.send("world")
 
 
-@bot.command(name="IdCanales")
+@bot.command(name="ListChannels")
 async def listar_canales_servidor(ctx):
     """Lista los nombres e IDs de los canales del servidor"""
 
