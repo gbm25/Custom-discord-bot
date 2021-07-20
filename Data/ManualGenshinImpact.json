@@ -1,0 +1,69 @@
+{
+  "banners": [
+    {
+      "name": "Leaves in the Wind",
+      "type": "Character Event Wish",
+      "urls": [
+        {
+          "wiki": "https://genshin-impact.fandom.com/wiki/Leaves_in_the_Wind/2021-06-29",
+          "oficial": "https://genshin.mihoyo.com/en/news/detail/13657"
+        }
+      ],
+      "status": "Active",
+      "start": "1624971600",
+      "end": "1626789599"
+    },
+    {
+      "name": "Epitome Invocation",
+      "type": "Weapon Event Wish",
+      "urls": [
+        {
+          "wiki": "https://genshin-impact.fandom.com/wiki/Leaves_in_the_Wind/2021-06-29",
+          "oficial": "https://genshin.mihoyo.com/en/news/detail/13657"
+        }
+      ],
+      "status": "Upcoming",
+      "start": "1626836400",
+      "end": "1628603999"
+    }
+  ],
+  "codes": [
+    {
+      "code": "GBNA9J5H9Y4H",
+      "external_link": "linkdeprueba",
+      "server": "All",
+      "rewards": [
+        {
+          "item_name": "Mondstadt Hash Brown ",
+          "quantity": "2"
+        },
+        {
+          "item_name": "Mora",
+          "quantity": "20000"
+        }
+      ],
+
+      "status": "Active",
+      "start": "1626645600",
+      "end": "Undefined"
+    },
+    {
+      "code": "GBNA9J5H9Y4H",
+      "external_link": "",
+      "server": "China",
+      "rewards": [
+        {
+          "item_name": "Primogem",
+          "quantity": "60"
+        },
+        {
+          "item_name": "Mora",
+          "quantity": "10000"
+        }
+      ],
+      "status": "Expired",
+      "start": "1626645600",
+      "end": "1626732000"
+    }
+  ]
+}
