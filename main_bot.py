@@ -1,8 +1,7 @@
 import discord
-from discord.ext import commands
-from secrets import token
-
-# import lorem
+from discord.ext import commands, tasks
+from secrets import token, channel_dc_pruebas
+import scraping_genshin_impact as sgi
 
 TOKEN = token
 
@@ -10,11 +9,34 @@ description = '''Croquetabot ! recién salido de la sartén 😁'''
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
+genshin_data = sgi.GenshinImpact()
 
 @bot.event
 async def on_ready():
     print(f'Se ha iniciado {bot.user.name}')
     print('------')
+    print(f"Comprobar objeto creado\r\n{genshin_data}")
+    print('------')
+    print('Lanzando el bucle genshin_impact_new_codes()')
+    genshin_impact_new_codes.start()
+
+
+@tasks.loop(seconds=15)
+async def genshin_impact_new_codes():
+    canal_genshin = bot.get_channel(channel_dc_pruebas)
+
+    codes_notification = genshin_data.check_new_codes()
+
+    for line in codes_notification:
+
+        text = f'Código: {line["code"]}\r\nEnlace externo: {line["external_link"]}\r\nValido en el servidor:' \
+               f' {line["server"]}\r\nRecompensas:\r\n'
+
+        for reward in line["rewards"]:
+            text += f'\t-{reward["item_name"]} x{reward["quantity"]}\r\n'
+        text += f'Con fechas:\r\n\t-{line["start"]}\r\n\t-{line["end"]}'
+        embed = discord.Embed(title=f"Prueba loop - Nuevo código", description=text, color=0x9208ea)
+        await canal_genshin.send(embed=embed, delete_after=15.0)
 
 
 @bot.command(name="SetSatisChannel")
