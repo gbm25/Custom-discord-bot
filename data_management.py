@@ -1,23 +1,30 @@
 import json
 
+
+
 def serialization_json(relative_path, file, data):
     # if no empty parameter
     if relative_path and file and data:
         # Open file to write
-        with open(f"{relative_path}{file}.json", "w") as write:
-            json.dump(data, write)
+        with open(f'{relative_path}{file}.json', 'w') as write:
+            json.dump(data, write, indent=4)
         write.close()
 
 
-def deserialization_json(self, relative_path, file):
+def deserialization_json(relative_path, file):
     # if no empty parameter
     if relative_path and file:
         # Open JSON file
-        json_file = open('data.json', )
+        json_file = open(f'{relative_path}{file}.json', )
 
-    # JSON object as a dictionary
-    data = json.load(json_file)
+    try:
+        # JSON object as a dictionary
+        data = json.load(json_file)
 
-    # Closing the JSON file
-    json_file.close()
-    return data
+        # Closing the JSON file
+        json_file.close()
+        return data
+
+    except json.JSONDecodeError:
+
+        return {}
