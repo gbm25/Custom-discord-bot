@@ -1,20 +1,29 @@
 import requests
 from bs4 import BeautifulSoup
+import data_management
+
 
 class GenshinImpact:
+    codes = None
+    banners = None
+    codes_active_bgcolor = "#9F9"
+    url_codes = "https://genshin-impact.fandom.com/wiki/Promotional_Codes"
 
     def __init__(self):
-        self.url_codes = "https://genshin-impact.fandom.com/wiki/Promotional_Codes"
-        self.codes_active_bgcolor = "#9F9"
-        self.data = {'banners': [{'name': 'Leaves in the Wind', 'type': 'Character Event Wish', 'urls': [
-            {'wiki': 'https://genshin-impact.fandom.com/wiki/Leaves_in_the_Wind/2021-06-29',
-             'oficial': 'https://genshin.mihoyo.com/en/news/detail/13657'}], 'status': 'Active', 'start': '1624971600',
-                                  'end': '1626789599'}, {'name': 'Epitome Invocation', 'type': 'Weapon Event Wish',
-                                                         'urls': [{
-                                                             'wiki': 'https://genshin-impact.fandom.com/wiki/Leaves_in_the_Wind/2021-06-29',
-                                                             'oficial': 'https://genshin.mihoyo.com/en/news/detail/13657'}],
-                                                         'status': 'Upcoming', 'start': '1626836400',
-                                                         'end': '1628603999'}]}
+        self.load_saved_data()
+
+    def load_saved_data(self):
+
+        self.codes = data_management.deserialization_json("./Data/", "GI_codes_data")
+        if not self.codes:
+            self.codes["codes"] = []
+        self.banners = data_management.deserialization_json("./Data/", "GI_banners_data")
+        if not self.banners:
+            self.banners["banners"] = []
+
+    def save_data(self):
+        data_management.serialization_json("./Data/", "GI_codes_data", self.codes)
+        data_management.serialization_json("./Data/", "GI_banners_data", self.banners)
 
     def get_codes(self):
         page = requests.get(self.url_codes)
@@ -42,6 +51,7 @@ class GenshinImpact:
             if code_column:
                 code_text = code_column.text.split("[")[0]
                 code_entry["code"] = code_text
+                code_entry["external_link"] = None
                 if external_link:
                     code_text += f'\r\n+ info click en enlace {external_link["href"]}'
                     code_entry["external_link"] = external_link["href"]
@@ -56,24 +66,23 @@ class GenshinImpact:
             # Parte dedicada a extraer las recompensas
             rewards_column = columns[2].get_text().split()
             rewards_list = []
-            item = {}
+
             item_name = []
 
             for element in rewards_column:
-                if not "×" in element:
+                if "×" not in element:
                     item_name.append(element)
                 else:
-                    item["item_name"] = " ".join(item_name)
-                    item["quantity"] = element.replace("×", "").replace(",", "")
+                    item = {"item_name": " ".join(item_name), "quantity": element.replace("×", "").replace(",", "")}
+
                     rewards_list.append(item)
+                    item_name = []
 
             code_entry["rewards"] = rewards_list
 
             # Parte dedicada a extraer si el código es valido o no
 
-            status = ""
-
-            if (f"background-color:{self.codes_active_bgcolor}" in columns[3].attrs['style']):
+            if f"background-color:{self.codes_active_bgcolor}" in columns[3].attrs['style']:
                 status = "Active"
             else:
                 status = "Expired"
@@ -86,6 +95,20 @@ class GenshinImpact:
             code_entry["end"] = duration_text[1]
 
             codes_lines.append(code_entry)
+        temp_dict = {"codes": codes_lines}
+        return temp_dict
 
-        self.data["codes"] = codes_lines
+    def check_new_codes(self):
 
+        new_scraped_codes = self.get_codes()
+
+        new_codes = []
+        for code_data in new_scraped_codes["codes"]:
+            if code_data["status"] == "Active" and code_data not in self.codes["codes"]:
+                new_codes.append(code_data)
+
+        if new_codes:
+            self.codes["codes"] = new_scraped_codes["codes"]
+            self.save_data()
+
+        return new_codes
