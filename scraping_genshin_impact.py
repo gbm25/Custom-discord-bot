@@ -103,12 +103,13 @@ class GenshinImpact:
         new_scraped_codes = self.get_codes()
 
         new_codes = []
+
         for code_data in new_scraped_codes["codes"]:
             if code_data["status"] == "Active" and code_data not in self.codes["codes"]:
                 new_codes.append(code_data)
 
-        if new_codes:
+        if new_codes or new_scraped_codes != self.codes:
             self.codes["codes"] = new_scraped_codes["codes"]
             self.save_data()
-
+        print(self.codes)
         return new_codes
