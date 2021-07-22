@@ -21,8 +21,9 @@ async def on_ready():
     genshin_impact_new_codes.start()
 
 
-@tasks.loop(seconds=15)
+@tasks.loop(hours=12)
 async def genshin_impact_new_codes():
+
     canal_genshin = bot.get_channel(channel_dc_pruebas)
 
     codes_notification = genshin_data.check_new_codes()
@@ -35,8 +36,8 @@ async def genshin_impact_new_codes():
         for reward in line["rewards"]:
             text += f'\t-{reward["item_name"]} x{reward["quantity"]}\r\n'
         text += f'Con fechas:\r\n\t-{line["start"]}\r\n\t-{line["end"]}'
-        embed = discord.Embed(title=f"Prueba loop - Nuevo código", description=text, color=0x9208ea)
-        await canal_genshin.send(embed=embed, delete_after=15.0)
+        embed = discord.Embed(title=f"Prueba loop - Nuevo código", description=text, color=0xf805de)
+        await canal_genshin.send(embed=embed)
 
 
 @bot.command(name="SetSatisChannel")
