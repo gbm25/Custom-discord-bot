@@ -11,11 +11,10 @@ bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
 genshin_data = sgi.GenshinImpact()
 
+
 @bot.event
 async def on_ready():
     print(f'Se ha iniciado {bot.user.name}')
-    print('------')
-    print(f"Comprobar objeto creado\r\n{genshin_data}")
     print('------')
     print('Lanzando el bucle genshin_impact_new_codes()')
     genshin_impact_new_codes.start()
@@ -23,7 +22,6 @@ async def on_ready():
 
 @tasks.loop(hours=12)
 async def genshin_impact_new_codes():
-
     canal_genshin = bot.get_channel(channel_dc_pruebas)
 
     codes_notification = genshin_data.check_new_codes()
@@ -36,8 +34,26 @@ async def genshin_impact_new_codes():
         for reward in line["rewards"]:
             text += f'\t-{reward["item_name"]} x{reward["quantity"]}\r\n'
         text += f'Con fechas:\r\n\t-{line["start"]}\r\n\t-{line["end"]}'
-        embed = discord.Embed(title=f"Prueba loop - Nuevo código", description=text, color=0xf805de)
+        embed = discord.Embed(title=f"Nuevo código", description=text, color=0xf805de)
         await canal_genshin.send(embed=embed)
+
+
+@bot.command(name="GenshinCodes")
+async def get_genshin_active_codes(ctx):
+    """Permite obtener los códigos activos de Genshin Impact"""
+    active_codes = genshin_data.get_active_codes()
+
+    if active_codes:
+        for line in active_codes:
+
+            text = f'Código: {line["code"]}\r\nEnlace externo: {line["external_link"]}\r\nValido en el servidor:' \
+                   f' {line["server"]}\r\nRecompensas:\r\n'
+
+            for reward in line["rewards"]:
+                text += f'\t-{reward["item_name"]} x{reward["quantity"]}\r\n'
+            text += f'Con fechas:\r\n\t-{line["start"]}\r\n\t-{line["end"]}'
+            embed = discord.Embed(title=f"Código Activo", description=text, color=0xf805de)
+            await ctx.send(embed=embed)
 
 
 @bot.command(name="SetSatisChannel")
