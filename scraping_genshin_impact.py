@@ -15,9 +15,12 @@ class GenshinImpact:
     def load_saved_data(self):
 
         self.codes = data_management.deserialization_json("./Data/", "GI_codes_data")
+        # Si no existen datos se crea el diccionario con la entrada vacía
         if not self.codes:
             self.codes["codes"] = []
+
         self.banners = data_management.deserialization_json("./Data/", "GI_banners_data")
+        # Si no existen datos se crea el diccionario con la entrada vacía
         if not self.banners:
             self.banners["banners"] = []
 
@@ -111,7 +114,7 @@ class GenshinImpact:
         if new_codes or new_scraped_codes["codes"] != self.codes["codes"]:
             self.codes["codes"] = new_scraped_codes["codes"]
             self.save_data()
-        print(self.codes)
+
         return new_codes
 
     def get_active_codes(self):
