@@ -25,7 +25,7 @@ class GenshinImpact:
         data_management.serialization_json("./Data/", "GI_codes_data", self.codes)
         data_management.serialization_json("./Data/", "GI_banners_data", self.banners)
 
-    def get_codes(self):
+    def scrap_codes(self):
         page = requests.get(self.url_codes)
 
         soup = BeautifulSoup(page.content, "html.parser")
@@ -100,7 +100,7 @@ class GenshinImpact:
 
     def check_new_codes(self):
 
-        new_scraped_codes = self.get_codes()
+        new_scraped_codes = self.scrap_codes()
 
         new_codes = []
 
@@ -108,8 +108,21 @@ class GenshinImpact:
             if code_data["status"] == "Active" and code_data not in self.codes["codes"]:
                 new_codes.append(code_data)
 
-        if new_codes or new_scraped_codes != self.codes:
+        if new_codes or new_scraped_codes["codes"] != self.codes["codes"]:
             self.codes["codes"] = new_scraped_codes["codes"]
             self.save_data()
         print(self.codes)
         return new_codes
+
+    def get_active_codes(self):
+
+        active_codes = []
+
+        for code_data in self.codes["codes"]:
+            if code_data["status"] == "Active":
+                active_codes.append(code_data)
+
+        if active_codes:
+            return active_codes
+        else:
+            return None
