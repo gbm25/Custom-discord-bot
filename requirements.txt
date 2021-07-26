@@ -7,3 +7,6 @@ idna==3.2
 multidict==5.1.0
 typing-extensions==3.10.0.0
 yarl==1.6.3
+
+requests~=2.26.0
+beautifulsoup4~=4.9.3
