@@ -95,7 +95,11 @@ class GenshinImpact:
             duration_text = columns[3].get_text(separator="¿?)(").strip().split("¿?)(")
 
             code_entry["start"] = duration_text[0]
-            code_entry["end"] = duration_text[1]
+
+            if len(duration_text) > 1:
+                code_entry["end"] = duration_text[1]
+            else:
+                code_entry["end"] = ""
 
             codes_lines.append(code_entry)
         temp_dict = {"codes": codes_lines}
