@@ -10,6 +10,7 @@ class GenshinImpact:
     url_codes = "https://genshin-impact.fandom.com/wiki/Promotional_Codes"
 
     def __init__(self):
+        '''Cuando se llama al constructor de la clase, lo primero que se fetchea es la copia local de los datos2'''
         self.load_saved_data()
 
     def load_saved_data(self):
@@ -32,18 +33,15 @@ class GenshinImpact:
         page = requests.get(self.url_codes)
 
         soup = BeautifulSoup(page.content, "html.parser")
-        code_table = soup.findAll("table", class_="wikitable sortable tdl3 tdl4")
-
-        for element in code_table:
-            table_lines = element.find_all('tr')
 
         codes_lines = []
 
-        for line in table_lines:
+        for line in soup.find('table').find_all('tr'):
 
             header = line.find('th')
             if header:
                 continue
+
             code_entry = {}
 
             columns = line.find_all('td')
@@ -84,13 +82,13 @@ class GenshinImpact:
             code_entry["rewards"] = rewards_list
 
             # Parte dedicada a extraer si el código es valido o no
-
             if f"background-color:{self.codes_active_bgcolor}" in columns[3].attrs['style']:
                 status = "Active"
             else:
                 status = "Expired"
 
             code_entry["status"] = status
+
             # Parte dedicada a extraer la duración
             duration_text = columns[3].get_text(separator="¿?)(").strip().split("¿?)(")
 
@@ -102,6 +100,7 @@ class GenshinImpact:
                 code_entry["end"] = ""
 
             codes_lines.append(code_entry)
+            
         temp_dict = {"codes": codes_lines}
         return temp_dict
 
