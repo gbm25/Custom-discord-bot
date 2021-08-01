@@ -13,15 +13,14 @@ class GenshinCode:
         self.start = start
         self.end = end
 
-
     def __hash__(self):
         return hash((self.promotional_code, self.start, self.end))
 
     def __eq__(self, other):
         if isinstance(other, GenshinCode):
-            return hash((self.promotional_code, self.start, self.end)) == hash((other.promotional_code, other.start, other.end))
+            return hash((self.promotional_code, self.start, self.end)) == hash(
+                (other.promotional_code, other.start, other.end))
         return False
-
 
     def asdict(self):
         return {
@@ -31,5 +30,5 @@ class GenshinCode:
             "rewards": [reward.asdict() for reward in self.rewards],
             "status": self.status,
             "start": self.start,
-            "end"   : self.end
+            "end": self.end
         }
