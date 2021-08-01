@@ -1,0 +1,828 @@
+{
+    "codes": [
+        {
+            "promotional_code": "Prime Gaming (August's Reward)",
+            "external_link": "https://gaming.amazon.com/loot/genshinimpact",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Fragile Resin",
+                    "quantity": "1"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "8"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "20000"
+                }
+            ],
+            "status": "Active",
+            "start": "Valid until September 8, 2021",
+            "end": "Notes: Release date TBA"
+        },
+        {
+            "promotional_code": "Prime Gaming (July's Reward)",
+            "external_link": "https://gaming.amazon.com/loot/genshinimpact",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "8"
+                },
+                {
+                    "item_name": "Mushroom Pizza",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Active",
+            "start": "Discovered: July 26, 2021",
+            "end": "Valid until August 18, 2021"
+        },
+        {
+            "promotional_code": "GENSHINGIFT",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "3"
+                }
+            ],
+            "status": "Active",
+            "start": "Discovered: November 10, 2020",
+            "end": "Valid (indefinite)"
+        },
+        {
+            "promotional_code": "CrucialGames (Giveaway)",
+            "external_link": "https://games.crucial.com/promotions/2140546853/genshin-impact-50-primogems-v16-giveaway",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: July 12, 2021",
+            "end": "Expired July 25, 2021"
+        },
+        {
+            "promotional_code": "GENSHINGALAXY",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                },
+                {
+                    "item_name": "Mondstadt Hash Brown",
+                    "quantity": "3"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "10"
+                },
+                {
+                    "item_name": "Northern Smoked Chicken",
+                    "quantity": "3"
+                },
+                {
+                    "item_name": "Fine Enhancement Ore",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: June 8, 2021",
+            "end": "Expired July 21, 2021"
+        },
+        {
+            "promotional_code": "GENSHINEPIC",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                },
+                {
+                    "item_name": "Squirrel Fish",
+                    "quantity": "3"
+                },
+                {
+                    "item_name": "Northern Apple Stew",
+                    "quantity": "3"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "10"
+                },
+                {
+                    "item_name": "Fine Enhancement Ore",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: June 8, 2021",
+            "end": "Expired July 21, 2021"
+        },
+        {
+            "promotional_code": "LS6T4L9ZZ7TH",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: July 9, 2021",
+            "end": "Expired July 10, 2021"
+        },
+        {
+            "promotional_code": "GBNA9J5H9Y4H",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: July 9, 2021",
+            "end": "Expired July 10, 2021"
+        },
+        {
+            "promotional_code": "AS6BQKLY9GLD",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: July 9, 2021",
+            "end": "Expired July 10, 2021"
+        },
+        {
+            "promotional_code": "Steelseries (Giveaway)",
+            "external_link": "https://games.steelseries.com/giveaway/1746958926/genshin-impact-v16-50-primogems-giveaway",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: June 25, 2021",
+            "end": "Expired"
+        },
+        {
+            "promotional_code": "SBNBUK67M37Z",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: March 19, 2021",
+            "end": "Expired"
+        },
+        {
+            "promotional_code": "GS6ACJ775KNV",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: March 18, 2021",
+            "end": "Expired June 9, 2021"
+        },
+        {
+            "promotional_code": "UTNBBGSZ3NQM",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: May 28, 2021",
+            "end": "Expired May 29, 2021"
+        },
+        {
+            "promotional_code": "8A6ABHTH2N9Z",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: May 28, 2021",
+            "end": "Expired May 29, 2021"
+        },
+        {
+            "promotional_code": "WTNTBYSZJNRD",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: May 28, 2021",
+            "end": "Expired May 29, 2021"
+        },
+        {
+            "promotional_code": "FS6SU367M279",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: April 16, 2021",
+            "end": "Expired April 17, 2021"
+        },
+        {
+            "promotional_code": "4BNSD3675J8D",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: April 16, 2021",
+            "end": "Expired April 17, 2021"
+        },
+        {
+            "promotional_code": "ATPTUJPP53QH",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: April 16, 2021",
+            "end": "Expired April 17, 2021"
+        },
+        {
+            "promotional_code": "2T7E9CPA7YJE",
+            "external_link": null,
+            "server": "China",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: April 16, 2021",
+            "end": "Expired April 17, 2021"
+        },
+        {
+            "promotional_code": "EBPWQU6SNZ22",
+            "external_link": null,
+            "server": "China",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: April 16, 2021",
+            "end": "Expired April 17, 2021"
+        },
+        {
+            "promotional_code": "CBNXRD6S7H3N",
+            "external_link": null,
+            "server": "China",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: April 16, 2021",
+            "end": "Expired April 17, 2021"
+        },
+        {
+            "promotional_code": "TT7BVJNPL249",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: March 22, 2021",
+            "end": "Expired March 31, 2021"
+        },
+        {
+            "promotional_code": "PSNTC8FEQK4D",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: March 6, 2021",
+            "end": "Expired March 7, 2021"
+        },
+        {
+            "promotional_code": "ET7ADQFF8KJR",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: March 6, 2021",
+            "end": "Expired March 7, 2021"
+        },
+        {
+            "promotional_code": "KTNSCQWW922M",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: March 6, 2021",
+            "end": "Expired March 7, 2021"
+        },
+        {
+            "promotional_code": "jsSK8n23jzR",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: January 22, 2021",
+            "end": "Expired January 23, 2021"
+        },
+        {
+            "promotional_code": "dU2mhjQL1ZT",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: January 22, 2021",
+            "end": "Expired January 23, 2021"
+        },
+        {
+            "promotional_code": "nBEm3myAL2b",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: January 22, 2021",
+            "end": "Expired January 23, 2021"
+        },
+        {
+            "promotional_code": "153YuSaenh",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: January 12, 2021",
+            "end": "Expired"
+        },
+        {
+            "promotional_code": "CUUPMBJSVD",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: January 8, 2021",
+            "end": "Expired January 26, 2021"
+        },
+        {
+            "promotional_code": "GSIMPTQ125",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: December 23, 2020",
+            "end": "Expired"
+        },
+        {
+            "promotional_code": "G3tQq6TOqmE",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: December 11, 2020",
+            "end": "Expired December 12, 2020"
+        },
+        {
+            "promotional_code": "5KVeIbSxDUU",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: December 11, 2020",
+            "end": "Expired December 12, 2020"
+        },
+        {
+            "promotional_code": "eATDgIXLD56",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: December 11, 2020",
+            "end": "Expired December 12, 2020"
+        },
+        {
+            "promotional_code": "GOLNXLAKC58",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: November 20, 2020",
+            "end": "Expired November 30, 2020"
+        },
+        {
+            "promotional_code": "GENSHIN1111",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: November 9, 2020",
+            "end": "Expired November 20, 2020"
+        },
+        {
+            "promotional_code": "GenshinZHB30",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "160"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: October 30, 2020",
+            "end": "Expired October 31, 2020"
+        },
+        {
+            "promotional_code": "GENSHINMHY0M",
+            "external_link": null,
+            "server": "America",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: October 14, 2020",
+            "end": "Expired October 21, 2020"
+        },
+        {
+            "promotional_code": "GENSHINMHY0I",
+            "external_link": null,
+            "server": "Asia",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: October 14, 2020",
+            "end": "Expired October 21, 2020"
+        },
+        {
+            "promotional_code": "GENSHINMHY0O",
+            "external_link": null,
+            "server": "Europe",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: October 14, 2020",
+            "end": "Expired October 21, 2020"
+        },
+        {
+            "promotional_code": "GENSHIN1006A",
+            "external_link": null,
+            "server": "America",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: October 5, 2020",
+            "end": "Expired October 13, 2020"
+        },
+        {
+            "promotional_code": "GENSHIN1006S",
+            "external_link": null,
+            "server": "Asia",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: October 5, 2020",
+            "end": "Expired October 13, 2020"
+        },
+        {
+            "promotional_code": "GENSHIN1006U",
+            "external_link": null,
+            "server": "Europe",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "30"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: October 5, 2020",
+            "end": "Expired October 13, 2020"
+        },
+        {
+            "promotional_code": "GENSHIN0928N",
+            "external_link": null,
+            "server": "America",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: September 30, 2020",
+            "end": "Expired October 7, 2020"
+        },
+        {
+            "promotional_code": "GENSHIN0928E",
+            "external_link": null,
+            "server": "Asia",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: September 30, 2020",
+            "end": "Expired October 7, 2020"
+        },
+        {
+            "promotional_code": "GENSHIN0928A",
+            "external_link": null,
+            "server": "Europe",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
+            "status": "Expired",
+            "start": "Discovered: September 30, 2020",
+            "end": "Expired October 7, 2020"
+        }
+    ]
+}

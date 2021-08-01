@@ -20,21 +20,22 @@ async def on_ready():
     genshin_impact_new_codes.start()
 
 
-@tasks.loop(hours=12)
+@tasks.loop(hours=2)
 async def genshin_impact_new_codes():
     canal_genshin = bot.get_channel(channel_dc_pruebas)
 
     codes_notification = genshin_data.check_new_codes()
 
-    for line in codes_notification:
-
-        text = f'Código: {line["code"]}\r\nEnlace externo: {line["external_link"]}\r\nValido en el servidor:' \
-               f' {line["server"]}\r\nRecompensas:\r\n'
-
-        for reward in line["rewards"]:
-            text += f'\t-{reward["item_name"]} x{reward["quantity"]}\r\n'
-        text += f'Con fechas:\r\n\t-{line["start"]}\r\n\t-{line["end"]}'
-        embed = discord.Embed(title=f"Nuevo código", description=text, color=0xf805de)
+    for code_line in codes_notification:
+        embed = discord.Embed(title=f"Nuevo código promocional detectado !", color=0xf805de)
+        embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
+        embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
+        embed.add_field(name="Servidor", value=code_line.server, inline=False)
+        embed.add_field(name="Recompensas", value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
+                                                               in code_line.rewards]), inline=False)
+        embed.add_field(name="Estado", value=code_line.status, inline=False)
+        embed.add_field(name="Descubierto", value=code_line.start, inline=False)
+        embed.add_field(name="Expira", value=code_line.end, inline=False)
         await canal_genshin.send(embed=embed)
 
 
@@ -44,15 +45,17 @@ async def get_genshin_active_codes(ctx):
     active_codes = genshin_data.get_active_codes()
 
     if active_codes:
-        for line in active_codes:
+        for code_line in active_codes:
+            embed = discord.Embed(title=f"Código Activo", color=0xf805de)
+            embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
+            embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
+            embed.add_field(name="Servidor", value=code_line.server, inline=False)
+            embed.add_field(name="Recompensas", value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
+                                                                   in code_line.rewards]), inline=False)
+            embed.add_field(name="Estado", value=code_line.status, inline=False)
+            embed.add_field(name="Descubierto", value=code_line.start, inline=False)
+            embed.add_field(name="Expira", value=code_line.end, inline=False)
 
-            text = f'Código: {line["code"]}\r\nEnlace externo: {line["external_link"]}\r\nValido en el servidor:' \
-                   f' {line["server"]}\r\nRecompensas:\r\n'
-
-            for reward in line["rewards"]:
-                text += f'\t-{reward["item_name"]} x{reward["quantity"]}\r\n'
-            text += f'Con fechas:\r\n\t-{line["start"]}\r\n\t-{line["end"]}'
-            embed = discord.Embed(title=f"Código Activo", description=text, color=0xf805de)
             await ctx.send(embed=embed)
 
 
@@ -62,8 +65,6 @@ async def set_satisfactory_channel(ctx, satis_channel):
 
     await ctx.send("No te voy a mentir, esto aun no esta implementado")
 
-    # channel = discord.utils.get(ctx.guild.channels, name=satis_channel)
-    # await ctx.send("world")
 
 
 @bot.command(name="ListChannels")
