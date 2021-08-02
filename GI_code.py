@@ -1,3 +1,6 @@
+from error_management import create_log
+
+
 class GenshinCode:
 
     def __init__(self, promotional_code=None, external_link=None, server=None, rewards=None, status=None, start=None,
@@ -18,8 +21,13 @@ class GenshinCode:
 
     def __eq__(self, other):
         if isinstance(other, GenshinCode):
-            return hash((self.promotional_code, self.start, self.end)) == hash(
-                (other.promotional_code, other.start, other.end))
+            create_log('./Logs/',
+                       f'Function __eq__ de la clase GenshinCode\r\n'
+                       f'Se compara {(self.promotional_code, self.start, self.end)}\r\n'
+                       f' con {(other.promotional_code, other.start, other.end)}\r\n'
+                       f'Resultado: {(self.promotional_code, self.start, self.end) == (other.promotional_code, other.start, other.end)}\r\n')
+            (self.promotional_code, self.start, self.end) == (other.promotional_code, other.start, other.end)
+            return (self.promotional_code, self.start, self.end) == (other.promotional_code, other.start, other.end)
         return False
 
     def asdict(self):
