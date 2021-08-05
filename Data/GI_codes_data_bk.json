@@ -1,0 +1,41 @@
+{
+  "codes": [
+    {
+      "promotional_code": "GBNA9J5H9Y4H",
+      "external_link": "linkdeprueba",
+      "server": "All",
+      "rewards": [
+        {
+          "item_name": "Mondstadt Hash Brown ",
+          "quantity": "2"
+        },
+        {
+          "item_name": "Mora",
+          "quantity": "20000"
+        }
+      ],
+
+      "status": "Active",
+      "start": "1626645600",
+      "end": "Undefined"
+    },
+    {
+      "promotional_code": "GBNA9J5H9Y4H",
+      "external_link": null,
+      "server": "China",
+      "rewards": [
+        {
+          "item_name": "Primogem",
+          "quantity": "60"
+        },
+        {
+          "item_name": "Mora",
+          "quantity": "10000"
+        }
+      ],
+      "status": "Expired",
+      "start": "1626645600",
+      "end": "1626732000"
+    }
+  ]
+}
