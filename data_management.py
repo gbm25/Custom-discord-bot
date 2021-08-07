@@ -39,12 +39,12 @@ def genshin_codes_to_json(relative_path, file, data):
     try:
         # if no empty parameter
         if relative_path and file and data['codes']:
-            data['codes'] = [code.asdict() for code in data['codes']]
-            if relative_path and file and data:
-                # Open file to write
-                with open(f'{relative_path}{file}.json', 'w+') as write:
-                    json.dump(data, write, indent=4)
-                write.close()
+            temp_dict = {'codes': [code.asdict() for code in data['codes']]}
+
+            # Open file to write
+            with open(f'{relative_path}{file}.json', 'w+') as write:
+                json.dump(temp_dict, write, indent=4)
+            write.close()
     except json.JSONDecodeError:
 
         return {}
