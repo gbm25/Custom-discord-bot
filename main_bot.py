@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands, tasks
-from secrets import token, channel_dc_pruebas
-import scraping_genshin_impact as sgi
+from secrets import token
+import genshin_impact_module
+
 
 TOKEN = token
 
@@ -9,62 +10,20 @@ description = '''Croquetabot ! recién salido de la sartén 😁'''
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
-genshin_data = sgi.GenshinImpact()
+bot.load_extension('genshin_impact_module')
 
 
 @bot.event
 async def on_ready():
     print(f'Se ha iniciado {bot.user.name}')
     print('------')
-    print('Lanzando el bucle genshin_impact_new_codes()')
-    genshin_impact_new_codes.start()
-
-
-@tasks.loop(hours=2)
-async def genshin_impact_new_codes():
-    canal_genshin = bot.get_channel(channel_dc_pruebas)
-
-    codes_notification = genshin_data.check_new_codes()
-
-    for code_line in codes_notification:
-        embed = discord.Embed(title=f"Nuevo código promocional detectado !", color=0xf805de)
-        embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
-        embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
-        embed.add_field(name="Servidor", value=code_line.server, inline=False)
-        embed.add_field(name="Recompensas", value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
-                                                               in code_line.rewards]), inline=False)
-        embed.add_field(name="Estado", value=code_line.status, inline=False)
-        embed.add_field(name="Descubierto", value=code_line.start, inline=False)
-        embed.add_field(name="Expira", value=code_line.end, inline=False)
-        await canal_genshin.send(embed=embed)
-
-
-@bot.command(name="GenshinCodes")
-async def get_genshin_active_codes(ctx):
-    """Permite obtener los códigos activos de Genshin Impact"""
-    active_codes = genshin_data.get_active_codes()
-
-    if active_codes:
-        for code_line in active_codes:
-            embed = discord.Embed(title=f"Código Activo", color=0xf805de)
-            embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
-            embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
-            embed.add_field(name="Servidor", value=code_line.server, inline=False)
-            embed.add_field(name="Recompensas", value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
-                                                                   in code_line.rewards]), inline=False)
-            embed.add_field(name="Estado", value=code_line.status, inline=False)
-            embed.add_field(name="Descubierto", value=code_line.start, inline=False)
-            embed.add_field(name="Expira", value=code_line.end, inline=False)
-
-            await ctx.send(embed=embed)
 
 
 @bot.command(name="SetSatisChannel")
-async def set_satisfactory_channel(ctx, satis_channel):
+async def set_satisfactory_channel(ctx, satis_channel=""):
     """Define el canal en el que se realizarán las acciones relacionadas con Satisfactory"""
 
     await ctx.send("No te voy a mentir, esto aun no esta implementado")
-
 
 
 @bot.command(name="ListChannels")
