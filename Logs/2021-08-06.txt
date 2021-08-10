@@ -1,0 +1,1028 @@
+[06/08/2021, 22:27:39]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid (indefinite)')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: False
+[06/08/2021, 22:27:40]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: False
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: False
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+ con ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+ con ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+ con ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+ con ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+ con ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:31:17]: Function __eq__ de la clase GenshinCode
+Se compara ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+ con ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+ con ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+ con ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+ con ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+ con ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+ con ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:31:18]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: False
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+ con ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+ con ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+ con ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+ con ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+ con ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+ con ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+ con ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+ con ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+ con ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+ con ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+ con ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:32:51]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:32:52]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:32:52]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: False
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+ con ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+ con ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+ con ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+ con ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+ con ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+ con ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+ con ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+ con ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+ con ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+ con ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+ con ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 22:48:48]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: False
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: False
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+ con ("Prime Gaming (August's Reward)", 'Valid until September 8, 2021', 'Notes: Release date TBA')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+ con ("Prime Gaming (July's Reward)", 'Discovered: July 26, 2021', 'Valid until August 18, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+ con ('GENSHINGIFT', 'Discovered: November 10, 2020', 'Valid until August 2, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+ con ('CrucialGames (Giveaway)', 'Discovered: July 12, 2021', 'Expired July 25, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINGALAXY', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+ con ('GENSHINEPIC', 'Discovered: June 8, 2021', 'Expired July 21, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('LS6T4L9ZZ7TH', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('GBNA9J5H9Y4H', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+ con ('AS6BQKLY9GLD', 'Discovered: July 9, 2021', 'Expired July 10, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+ con ('Steelseries (Giveaway)', 'Discovered: June 25, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+ con ('SBNBUK67M37Z', 'Discovered: March 19, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+ con ('GS6ACJ775KNV', 'Discovered: March 18, 2021', 'Expired June 9, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('UTNBBGSZ3NQM', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('8A6ABHTH2N9Z', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+ con ('WTNTBYSZJNRD', 'Discovered: May 28, 2021', 'Expired May 29, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('FS6SU367M279', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('4BNSD3675J8D', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('ATPTUJPP53QH', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('2T7E9CPA7YJE', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('EBPWQU6SNZ22', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+ con ('CBNXRD6S7H3N', 'Discovered: April 16, 2021', 'Expired April 17, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+ con ('TT7BVJNPL249', 'Discovered: March 22, 2021', 'Expired March 31, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('PSNTC8FEQK4D', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('ET7ADQFF8KJR', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+ con ('KTNSCQWW922M', 'Discovered: March 6, 2021', 'Expired March 7, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('jsSK8n23jzR', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('dU2mhjQL1ZT', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+ con ('nBEm3myAL2b', 'Discovered: January 22, 2021', 'Expired January 23, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+ con ('153YuSaenh', 'Discovered: January 12, 2021', 'Expired')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+ con ('CUUPMBJSVD', 'Discovered: January 8, 2021', 'Expired January 26, 2021')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+ con ('GSIMPTQ125', 'Discovered: December 23, 2020', 'Expired')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('G3tQq6TOqmE', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('5KVeIbSxDUU', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+ con ('eATDgIXLD56', 'Discovered: December 11, 2020', 'Expired December 12, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+ con ('GOLNXLAKC58', 'Discovered: November 20, 2020', 'Expired November 30, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+ con ('GENSHIN1111', 'Discovered: November 9, 2020', 'Expired November 20, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+ con ('GenshinZHB30', 'Discovered: October 30, 2020', 'Expired October 31, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0M', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0I', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+ con ('GENSHINMHY0O', 'Discovered: October 14, 2020', 'Expired October 21, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006A', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006S', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+ con ('GENSHIN1006U', 'Discovered: October 5, 2020', 'Expired October 13, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928N', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928E', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
+[06/08/2021, 23:28:32]: Function __eq__ de la clase GenshinCode
+Se compara ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+ con ('GENSHIN0928A', 'Discovered: September 30, 2020', 'Expired October 7, 2020')
+Resultado: True
