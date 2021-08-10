@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import re
 from GI_code import GenshinCode
 from GI_reward import GenshinReward
 import data_management
@@ -159,17 +160,25 @@ class GenshinImpact:
             # Es necesario un análisis más profundo para poder rehacer esta parte.
             duration_text = columns[3].get_text(separator="¿?)(").strip().split("¿?)(")
 
-            # Se asume que la primera fecha es la fecha de inicio
-            genshin_code_data.start = duration_text[0]
+            # Iteramos sobre las lineas recuperadas
+            # Es probable que en ocasiones no contenga la fecha de comienzo y/o fin, e incluso que contenga
+            # otros elementos
+            for duration_line in duration_text:
 
-            # Si hay más de una linea, se asume que la segunda fecha es la fecha de fin/expiración
-            if len(duration_text) > 1:
-                genshin_code_data.end = duration_text[1]
-            # Si no hay más lineas se asume que no hay fecha fin/expiración o que no esta definido
-            else:
-                genshin_code_data.end = None
+                # Comprobamos si en la linea se encuentra el patrón siguiente:
+                # Palabra + Espacio + 1 o 2 dígitos + coma + 0 o 1 espacio + 4 dígitos
+                if re.search(r"\w+\s\d{1,2},\s?\d{4}", duration_line):
+                    # Comprobamos si en la linea se encuentra el patrón:
+                    # Discovered + espacio o : 0 o más veces
+                    if re.search(r"Discovered(\s|:)*", duration_line):
+                        # De encontrarse, se extrae ese patrón y se añade al objeto
+                        genshin_code_data.start = re.search(r"\w+\s\d{1,2},\s?\d{4}", duration_line).group(0)
+                        # Valid until o Expired + espacio o : 0 o más veces
+                    if re.search(r"(Valid until|Expired)(:|\s)*", duration_line):
+                        # De encontrarse, se extrae ese patrón y se añade al objeto
+                        genshin_code_data.end = re.search(r"\w+\s\d{1,2},\s?\d{4}", duration_line).group(0)
 
-            # Una vez todos los datos añadidos al objeto GenshinCode, lo añadimos a la variable que los va acumulando.
+            # # Una vez todos los datos añadidos al objeto GenshinCode, lo añadimos a la variable que los va acumulando.
             codes_lines.append(genshin_code_data)
 
         # Se crea un diccionario con clave "codes" y con valor todos los objetos GenshinCode.
@@ -204,6 +213,7 @@ class GenshinImpact:
         return new_codes
 
     def get_active_codes(self):
+        """Devuelve un array de objetos GenshinCode que contiene los códigos que aún están activos"""
 
         # Se inicializa un array vacío, que almacenará los códigos activos que tenemos registrados.
         active_codes = []
@@ -216,3 +226,16 @@ class GenshinImpact:
 
         # Devolvemos un array vacío o los códigos con estado activo.
         return active_codes
+
+    def refresh_codes(self, force=False):
+        """Comprueba si hay nuevos elementos en la tabla, si los hay, guarda los datos en local.
+        Se puede forzar y sobreescribir los datos"""
+
+        # Se llama a la función que realiza scraping de los códigos promocionales y se almacenan los datos que devuelve.
+        new_scraped_codes = self.scrap_codes()
+
+        # Si hay nuevos códigos o se fuerza a sobreescribir los datos, remplazamos los datos que tenemos
+        # por los de la nueva tabla, y guardamos los datos en archivos locales.
+        if new_scraped_codes != self.codes or force:
+            self.codes = new_scraped_codes
+            self.save_data()
