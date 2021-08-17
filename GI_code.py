@@ -17,11 +17,11 @@ class GenshinCode:
         self.end = end
 
     def __hash__(self):
-        return hash((self.promotional_code, self.start, self.end))
+        return hash((self.promotional_code, self.status, self.start, self.end))
 
     def __eq__(self, other):
         if isinstance(other, GenshinCode):
-            return (self.promotional_code, self.start, self.end) == (other.promotional_code, other.start, other.end)
+            return (self.promotional_code, self.status, self.start, self.end) == (other.promotional_code, other.status, other.start, other.end)
         return False
 
     def asdict(self):
