@@ -11,7 +11,8 @@ class GenshinImpact:
     codes = None
     banners = None
 
-    codes_active_bgcolor = "#9F9"
+    codes_active_bgcolor_hex = "#9F9"
+    codes_active_bg_color_rgb = "153,255,153"
     url_codes = "https://genshin-impact.fandom.com/wiki/Promotional_Codes"
 
     base_fandom_url = "https://genshin-impact.fandom.com"
@@ -148,7 +149,8 @@ class GenshinImpact:
             # Si el atributo de clase que contiene el color de las lineas activas se encuentra el atributo "style" de
             # alguna etiqueta html de la cuarta columna, el estado es activo y se establece como "Active" en el objeto.
             # De no ser asi, se considerá como expirado y se establece como "Expired" en el objeto.
-            if f"background-color:{self.codes_active_bgcolor}" in columns[3].attrs['style']:
+            if f"background-color:{self.codes_active_bgcolor_hex}" in columns[3].attrs['style'] \
+                    or f"background-color:rgb({self.codes_active_bg_color_rgb}" in columns[3].attrs['style']:
                 genshin_code_data.status = "Active"
             else:
                 genshin_code_data.status = "Expired"
@@ -307,7 +309,7 @@ class GenshinImpact:
 
         return banner_data
 
-    def banners_table_to_dict(self, table, status):
+    def banners_table_to_dict(self, table, status: str):
         banners = []
 
         if not table:
@@ -380,6 +382,5 @@ class GenshinImpact:
         if self.banners != new_scraped_banners:
             self.banners = new_scraped_banners
             self.save_data()
-
 
         return {"currents": new_banners_current, "upcoming": new_banners_upcoming}
