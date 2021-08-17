@@ -34,3 +34,9 @@ class GenshinImpactServerTime:
                 dt = dt.replace(tzinfo=None)
 
             self.server_time = GenshinDatetime(from_datetime=dt).set_server(region)
+
+    def asdict(self):
+        return {
+            "datetime": self.server_time.isoformat(),
+            "region": self.region
+        }
