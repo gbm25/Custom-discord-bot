@@ -29,8 +29,13 @@ class GenshinImpactModule(commands.Cog):
             embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
             embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
             embed.add_field(name="Servidor", value=code_line.server, inline=False)
-            embed.add_field(name="Recompensas", value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
-                                                                   in code_line.rewards]), inline=False)
+            if code_line.rewards:
+                embed.add_field(name="Recompensas",
+                                value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
+                                                   in code_line.rewards]
+                                                  ), inline=False)
+            else:
+                embed.add_field(name="Recompensas", value="Recompensa no especificada", inline=False)
             embed.add_field(name="Estado", value=code_line.status, inline=False)
             embed.add_field(name="Descubierto", value=code_line.start, inline=False)
             embed.add_field(name="Expira", value=code_line.end, inline=False)
@@ -47,9 +52,13 @@ class GenshinImpactModule(commands.Cog):
                 embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
                 embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
                 embed.add_field(name="Servidor", value=code_line.server, inline=False)
-                embed.add_field(name="Recompensas",
-                                value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
-                                                   in code_line.rewards]), inline=False)
+                if code_line.rewards:
+                    embed.add_field(name="Recompensas",
+                                    value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
+                                                       in code_line.rewards]
+                                                      ), inline=False)
+                else:
+                    embed.add_field(name="Recompensas", value="Recompensa no especificada", inline=False)
                 embed.add_field(name="Estado", value=code_line.status, inline=False)
                 embed.add_field(name="Descubierto", value=code_line.start, inline=False)
                 embed.add_field(name="Expira", value=code_line.end, inline=False)
