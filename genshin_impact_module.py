@@ -65,5 +65,47 @@ class GenshinImpactModule(commands.Cog):
 
                 await ctx.send(embed=embed)
 
+    @commands.command(name="GenshinBanners")
+    async def get_genshin_active_codes(self, ctx):
+
+        current_banners = self.genshin_data.get_current_banners()
+
+        upcoming_banners = self.genshin_data.get_upcoming_banners()
+
+        if current_banners:
+            for banner in current_banners:
+
+                embed = discord.Embed(title=f"Banner actual", color=0xf805de)
+                embed.set_thumbnail(url=banner.image)
+                embed.add_field(name="Nombre del evento: ", value=banner.name, inline=False)
+                embed.add_field(name="URL fandom: ", value=banner.url_fandom, inline=False)
+                embed.add_field(name="URL anuncio oficial: ", value=banner.url_official, inline=False)
+                embed.add_field(name="Tipo de banner: ", value=banner.wish_type, inline=False)
+                for time in banner.start:
+                    embed.add_field(name=f"Hora de inicio ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_start_time(time.region), inline=True)
+                for time in banner.end:
+                    embed.add_field(name=f"Hora de fin ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_end_time(time.region), inline=True)
+                for time in banner.end:
+                    embed.add_field(name=f"Tiempo restante ({time.region.capitalize().replace('_',' ')}): ", value=banner.remain_time(time.region,True), inline=True)
+                await ctx.send(embed=embed)
+
+        if upcoming_banners:
+            for banner in upcoming_banners:
+
+                embed = discord.Embed(title=f"Banner futuro", color=0xf805de)
+                embed.set_thumbnail(url=banner.image)
+                embed.add_field(name="Nombre del evento: ", value=banner.name, inline=False)
+                embed.add_field(name="URL fandom: ", value=banner.url_fandom, inline=False)
+                embed.add_field(name="URL anuncio oficial: ", value=banner.url_official, inline=False)
+                embed.add_field(name="Tipo de banner: ", value=banner.wish_type, inline=False)
+                for time in banner.start:
+                    embed.add_field(name=f"Hora de inicio ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_start_time(time.region), inline=True)
+                for time in banner.end:
+                    embed.add_field(name=f"Hora de fin ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_end_time(time.region), inline=True)
+                for time in banner.end:
+                    embed.add_field(name=f"Tiempo restante ({time.region.capitalize().replace('_',' ')}): ", value=banner.remain_time(time.region,True), inline=True)
+                await ctx.send(embed=embed)
+
+
 def setup(bot):
     bot.add_cog(GenshinImpactModule(bot))
