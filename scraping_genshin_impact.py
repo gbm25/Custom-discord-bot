@@ -384,3 +384,9 @@ class GenshinImpact:
             self.save_data()
 
         return {"currents": new_banners_current, "upcoming": new_banners_upcoming}
+
+    def get_current_banners(self):
+        return [banner for banner in self.banners['banners'] if banner.status == "Current"]
+
+    def get_upcoming_banners(self):
+        return [banner for banner in self.banners['banners'] if banner.status == "Upcoming"]
