@@ -66,6 +66,24 @@ class GenshinBanner:
             else:
                 raise ValueError(f'Value {self.end} not valid for end date parameter')
 
+    def time_until(self,server, normalize_delta=False):
+        if server not in servers_timezone.keys():
+            raise ValueError(f'{server} is not a valid option for parameter "server".'
+                             f'The value must be one of {servers_timezone.keys()}')
+        else:
+            if self.start:
+                server_start_time = \
+                    [genshin_server_time for genshin_server_time in self.start if genshin_server_time.region == server][0]
+
+                if normalize_delta:
+                    return str(server_start_time.server_time + server_start_time.server_time.dst() - GenshinDatetime.now().to_server(
+                        server)).split('.')[0]
+                else:
+                    return server_start_time.server_time + server_start_time.server_time.dst() - GenshinDatetime.now().to_server(
+                        server)
+            else:
+                raise ValueError(f'Value {self.start} not valid for end date parameter')
+
     def get_start_time(self, server):
         if server not in servers_timezone.keys():
             raise ValueError(f'{server} is not a valid option for parameter "server".'
