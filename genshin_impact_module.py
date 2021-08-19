@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from secrets import channel_dc_pruebas
 import scraping_genshin_impact as sgi
+import GI_templates as MessageTemplate
 
 
 class GenshinImpactModule(commands.Cog):
@@ -66,45 +67,34 @@ class GenshinImpactModule(commands.Cog):
                 await ctx.send(embed=embed)
 
     @commands.command(name="GenshinBanners")
-    async def get_genshin_active_codes(self, ctx):
+    async def get_genshin_banners(self, ctx):
 
-        current_banners = self.genshin_data.get_current_banners()
+        banners = self.genshin_data.get_upcoming_banners() + self.genshin_data.get_current_banners()
 
-        upcoming_banners = self.genshin_data.get_upcoming_banners()
+        if banners:
+            for banner in banners:
+                embed_title = "Banner {}".format("actual" if banner.status == "Current" else "futuro")
+                message = MessageTemplate.generate_banner_message(embed_title, banner)
 
-        if current_banners:
-            for banner in current_banners:
+                await ctx.send(embed=message)
+        else:
+            await ctx.send("Actualmente no existe información sobre los banners actuales y futuros")
 
-                embed = discord.Embed(title=f"Banner actual", color=0xf805de)
-                embed.set_thumbnail(url=banner.image)
-                embed.add_field(name="Nombre del evento: ", value=banner.name, inline=False)
-                embed.add_field(name="URL fandom: ", value=banner.url_fandom, inline=False)
-                embed.add_field(name="URL anuncio oficial: ", value=banner.url_official, inline=False)
-                embed.add_field(name="Tipo de banner: ", value=banner.wish_type, inline=False)
-                for time in banner.start:
-                    embed.add_field(name=f"Hora de inicio ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_start_time(time.region), inline=True)
-                for time in banner.end:
-                    embed.add_field(name=f"Hora de fin ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_end_time(time.region), inline=True)
-                for time in banner.end:
-                    embed.add_field(name=f"Tiempo restante ({time.region.capitalize().replace('_',' ')}): ", value=banner.remain_time(time.region,True), inline=True)
-                await ctx.send(embed=embed)
 
-        if upcoming_banners:
-            for banner in upcoming_banners:
+    @tasks.loop(hours=2)
+    async def genshin_impact_new_banner_info(self):
+        canal_genshin = self.bot.get_channel(channel_dc_pruebas)
+        new_banners = self.genshin_data.check_new_banners()
 
-                embed = discord.Embed(title=f"Banner futuro", color=0xf805de)
-                embed.set_thumbnail(url=banner.image)
-                embed.add_field(name="Nombre del evento: ", value=banner.name, inline=False)
-                embed.add_field(name="URL fandom: ", value=banner.url_fandom, inline=False)
-                embed.add_field(name="URL anuncio oficial: ", value=banner.url_official, inline=False)
-                embed.add_field(name="Tipo de banner: ", value=banner.wish_type, inline=False)
-                for time in banner.start:
-                    embed.add_field(name=f"Hora de inicio ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_start_time(time.region), inline=True)
-                for time in banner.end:
-                    embed.add_field(name=f"Hora de fin ({time.region.capitalize().replace('_',' ')}): ", value=banner.get_end_time(time.region), inline=True)
-                for time in banner.end:
-                    embed.add_field(name=f"Tiempo restante ({time.region.capitalize().replace('_',' ')}): ", value=banner.remain_time(time.region,True), inline=True)
-                await ctx.send(embed=embed)
+        if new_banners['currents']:
+            for banner in new_banners['currents']:
+                message = MessageTemplate.generate_banner_message("Nuevo banner actual/Nueva información", banner)
+                await canal_genshin.send(embed=message)
+
+        if new_banners['upcoming']:
+            for banner in new_banners['upcoming']:
+                message = MessageTemplate.generate_banner_message("Nuevo banner futuro/Nueva información", banner)
+                await canal_genshin.send(embed=message)
 
 
 def setup(bot):
