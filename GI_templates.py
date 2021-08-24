@@ -1,5 +1,6 @@
 import discord
 
+
 def generate_code_message(embed_title: str, code_line):
     embed = discord.Embed(title=f"{embed_title}", color=0xf805de)
     embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
@@ -18,15 +19,19 @@ def generate_code_message(embed_title: str, code_line):
 
     return embed
 
+
 def generate_banner_message(embed_title: str, banner):
     embed = discord.Embed(title=f"{embed_title}", color=0xf805de)
-    embed.set_thumbnail(url=banner.image)
+    if banner.image:
+        embed.set_thumbnail(url=banner.image)
+
     embed.add_field(name="Nombre del evento: ", value=banner.name, inline=False)
     embed.add_field(name="Tipo de banner: ", value=banner.wish_type, inline=False)
 
+    if banner.url_official:
+        embed.add_field(name="URL anuncio oficial: ", value=banner.url_official, inline=False)
     if banner.url_fandom:
         embed.add_field(name="URL fandom: ", value=banner.url_fandom, inline=False)
-        embed.add_field(name="URL anuncio oficial: ", value=banner.url_official, inline=False)
 
         for time in banner.start:
             embed.add_field(name=f"Hora de inicio ({time.region.capitalize().replace('_', ' ')}): ",
