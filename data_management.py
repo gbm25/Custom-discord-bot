@@ -122,6 +122,7 @@ def json_to_genshin_banners(relative_path, file):
                     name=banner['name'],
                     url_fandom=banner['url_fandom'],
                     url_official=banner['url_official'],
+                    wish_type=banner['wish_type'],
                     image=banner['image'],
                     status=banner['status'],
 
