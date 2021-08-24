@@ -255,7 +255,7 @@ class GenshinImpact:
 
             if ' UTC' in datetime_str.upper() or ' GMT' in datetime_str.upper():
                 datetime_format += ' %Z'
-            elif '+' in datetime_str or '-' in datetime_str:
+            if '+' in datetime_str or '-' in datetime_str:
                 datetime_format += '%z'
             return datetime_format
 
@@ -272,9 +272,9 @@ class GenshinImpact:
 
             if offset_time:
                 if len(offset_time) == 1:
-                    return f'{datetime_str.split(offset_simbol)[0]}{offset_time}0{offset_time}00'
+                    return f'{datetime_str.split(offset_simbol)[0]}{offset_simbol}0{offset_time}00'
                 else:
-                    return f'{datetime_str.split(offset_simbol)[0]}{offset_time}{offset_time}00'
+                    return f'{datetime_str.split(offset_simbol)[0]}{offset_simbol}{offset_time}00'
             return datetime_str
 
         fandom_page = requests.get(url)
@@ -287,25 +287,34 @@ class GenshinImpact:
 
         event_body = source.find("div", {"class": "mw-parser-output"}).findChildren(recursive=False)
 
-        banner_data.image = event_body[0].find('img').get("src")
+        if event_body[0].find("a", {"class": "image"}):
+            banner_data.image = event_body[0].find("a", {"class": "image"}).get('href')
 
-        duration = event_body[1].get_text().split('\n')
-
+        duration = None
+        official_url = None
         date_format = r'(\w+\s\d{1,2},\s\d{4}\s(?:\d{2}:?)+(?:\w|\s|\+|-)*)'
 
-        matches = re.findall(date_format, duration[0])
+        for element in event_body:
+            if "Duration:" in element.get_text():
+                duration = element.get_text().split('\n')
+                continue
+            if "Official announcement" in element.get_text():
+                official_url = element.a.get('href')
 
-        start = normalize_datetime_offset(matches[0])
-        start_format = get_datetime_format(matches[0])
+        if duration:
+            matches = re.findall(date_format, duration[0])
 
-        banner_data.set_start_time(start, start_format)
+            start = normalize_datetime_offset(matches[0])
+            start_format = get_datetime_format(matches[0])
 
-        end = normalize_datetime_offset(matches[1])
-        end_format = get_datetime_format(matches[1])
+            banner_data.set_start_time(start, start_format)
 
-        banner_data.set_end_time(end, end_format)
+            end = normalize_datetime_offset(matches[1])
+            end_format = get_datetime_format(matches[1])
 
-        banner_data.url_official = event_body[2].a.get('href')
+            banner_data.set_end_time(end, end_format)
+
+        banner_data.url_official = official_url
 
         return banner_data
 
@@ -320,13 +329,13 @@ class GenshinImpact:
         if banners_columns:
             for banner in banners_columns:
 
-                if banner.a.get("href"):
+                if banner.a:
                     fandom_url = f'https://genshin-impact.fandom.com{banner.a.get("href")}'
                     banner_data = self.extract_banner_info_fandom(fandom_url)
                 else:
-                    banner_data = GenshinBanner(name=banner.a.get("title").split('/')[0])
+                    banner_data = GenshinBanner(name=banner.span.text)
 
-                if "Epitome" in banner.a.get("title"):
+                if "Epitome" in banner_data.name:
                     banner_data.wish_type = "Weapon"
                 else:
                     banner_data.wish_type = "Character"
@@ -356,7 +365,7 @@ class GenshinImpact:
             else:
                 return self.banners_table_to_dict(banner_html, banner_status)
 
-        return self.banners_table_to_dict(None, banner_status)
+        return []
 
     def check_new_banners(self):
         """Comprueba si hay cambios en las tablas de banners activos (Current) o por venir (Upcoming), actualizando
@@ -376,7 +385,7 @@ class GenshinImpact:
                 new_banners_current.append(banner)
 
         for banner in new_scraped_banners_upcoming:
-            if banner not in self.banners:
+            if banner not in self.banners['banners'] and banner.url_fandom:
                 new_banners_upcoming.append(banner)
 
         if self.banners != new_scraped_banners:
@@ -386,7 +395,7 @@ class GenshinImpact:
         return {"currents": new_banners_current, "upcoming": new_banners_upcoming}
 
     def get_current_banners(self):
-        return [banner for banner in self.banners['banners'] if banner.status == "Current"]
+        return [banner for banner in self.banners['banners'] if banner.status == "Current" and banner.url_fandom]
 
     def get_upcoming_banners(self):
-        return [banner for banner in self.banners['banners'] if banner.status == "Upcoming"]
+        return [banner for banner in self.banners['banners'] if banner.status == "Upcoming" and banner.url_fandom]
