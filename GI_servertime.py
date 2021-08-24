@@ -6,7 +6,7 @@ from GI_datetime import GenshinDatetime, servers_timezone
 
 
 class GenshinImpactServerTime:
-    def __init__(self, region: str, dt: Union[datetime, str], datetime_format: str = None):
+    def __init__(self, region: str, dt: Union[datetime, str], datetime_format: str = None, fixed_time=False):
         if region not in servers_timezone.keys():
             raise ValueError(f'{region} is not a valid option for parameter "region".'
                              f'The value must be one of {servers_timezone.keys()}')
@@ -17,10 +17,15 @@ class GenshinImpactServerTime:
                 try:
                     genshin_datetime = GenshinDatetime.strptime(dt, datetime_format)
 
-                    if genshin_datetime.tzinfo:
-                        genshin_datetime = genshin_datetime.replace(tzinfo=None)
+                    if not fixed_time:
 
-                    self.server_time = genshin_datetime.set_server(region)
+                        if genshin_datetime.tzinfo:
+                            genshin_datetime = genshin_datetime.replace(tzinfo=None)
+
+                        self.server_time = genshin_datetime.set_server(region)
+                    else:
+
+                        self.server_time = genshin_datetime.to_server(region)
 
                 except ValueError:
                     raise
@@ -29,11 +34,14 @@ class GenshinImpactServerTime:
                                  f'A valid date time string format is necessary '
                                  f'for the given string date time {dt}')
         else:
+            if not fixed_time:
+                if dt.tzinfo:
+                    dt = dt.replace(tzinfo=None)
 
-            if dt.tzinfo:
-                dt = dt.replace(tzinfo=None)
+                self.server_time = GenshinDatetime(from_datetime=dt).set_server(region)
+            else:
 
-            self.server_time = GenshinDatetime(from_datetime=dt).set_server(region)
+                self.server_time = GenshinDatetime(from_datetime=dt).to_server(region)
 
     def asdict(self):
         return {
