@@ -41,11 +41,11 @@ class GenshinBanner:
                 self.end = end
 
     def __hash__(self):
-        return hash((self.name, self.url_fandom, self.url_official))
+        return hash((self.name, self.status, self.url_fandom))
 
     def __eq__(self, other):
         if isinstance(other, GenshinBanner):
-            return (self.name, self.url_fandom, self.url_official) == (other.name, other.url_fandom, other.url_official)
+            return (self.name, self.status,self.url_fandom) == (other.name, other.status,other.url_fandom)
         return False
 
     def remain_time(self, server, normalize_delta=False):
@@ -64,7 +64,7 @@ class GenshinBanner:
                     return server_end_time.server_time - GenshinDatetime.now().to_server(
                         server) + server_end_time.server_time.dst()
             else:
-                raise ValueError(f'Value {self.end} not valid for end date parameter')
+                return None
 
     def time_until(self,server, normalize_delta=False):
         if server not in servers_timezone.keys():
@@ -76,13 +76,13 @@ class GenshinBanner:
                     [genshin_server_time for genshin_server_time in self.start if genshin_server_time.region == server][0]
 
                 if normalize_delta:
-                    return str(server_start_time.server_time + server_start_time.server_time.dst() - GenshinDatetime.now().to_server(
+                    return str(server_start_time.server_time - GenshinDatetime.now().to_server(
                         server)).split('.')[0]
                 else:
-                    return server_start_time.server_time + server_start_time.server_time.dst() - GenshinDatetime.now().to_server(
+                    return server_start_time.server_time - GenshinDatetime.now().to_server(
                         server)
             else:
-                raise ValueError(f'Value {self.start} not valid for end date parameter')
+                return None
 
     def get_start_time(self, server):
         if server not in servers_timezone.keys():
@@ -105,11 +105,11 @@ class GenshinBanner:
         else:
             time = [genshin_server_time.server_time for genshin_server_time in self.end if
                     genshin_server_time.region == server][0]
-            return (time + time.dst()).strftime("%m/%d/%Y, %H:%M:%S")
+            return time + time.dst()
 
     def set_start_time(self, datetime_str: str, str_format: str):
         for region in servers_timezone.keys():
-            self.start.append(GenshinImpactServerTime(region, datetime_str, str_format))
+            self.start.append(GenshinImpactServerTime(region, datetime_str, str_format, True))
 
     def set_end_time(self, datetime_str: str, str_format: str):
         for region in servers_timezone.keys():
@@ -127,9 +127,14 @@ class GenshinBanner:
         for server in servers_timezone.keys():
             print(f'\t- {server.capitalize().replace("_", " ")} - From: {self.get_start_time(server)} '
                   f'to {self.get_end_time(server)}')
-        print('Remain Time:')
-        for server in servers_timezone.keys():
-            print(f'\t- {server.capitalize().replace("_", " ")}: {self.remain_time(server, True)}')
+        if self.status == "Current":
+            print('Remain Time:')
+            for server in servers_timezone.keys():
+                print(f'\t- {server.capitalize().replace("_", " ")}: {self.remain_time(server, True)}')
+        else:
+            print('Time until:')
+            for server in servers_timezone.keys():
+                print(f'\t- {server.capitalize().replace("_", " ")}: {self.time_until(server, True)}')
 
     def asdict(self):
         return {
