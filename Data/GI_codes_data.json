@@ -1,48 +1,22 @@
 {
     "codes": [
         {
-            "promotional_code": "Prime Gaming (August's Reward)",
-            "external_link": "https://gaming.amazon.com/loot/genshinimpact",
+            "promotional_code": "Paimon Extension on Twitch",
+            "external_link": "https://www.hoyolab.com/genshin/article/591256",
             "server": "All",
-            "rewards": [
-                {
-                    "item_name": "Fragile Resin",
-                    "quantity": "1"
-                },
-                {
-                    "item_name": "Mystic Enhancement Ore",
-                    "quantity": "8"
-                },
-                {
-                    "item_name": "Mora",
-                    "quantity": "20000"
-                }
-            ],
+            "rewards": [],
             "status": "Active",
-            "start": null,
-            "end": "September 8, 2021"
+            "start": "July 23, 2021",
+            "end": "August 31, 2021"
         },
         {
-            "promotional_code": "Prime Gaming (July's Reward)",
+            "promotional_code": "Prime Gaming",
             "external_link": "https://gaming.amazon.com/loot/genshinimpact",
             "server": "All",
-            "rewards": [
-                {
-                    "item_name": "Primogem",
-                    "quantity": "60"
-                },
-                {
-                    "item_name": "Hero's Wit",
-                    "quantity": "8"
-                },
-                {
-                    "item_name": "Mushroom Pizza",
-                    "quantity": "5"
-                }
-            ],
+            "rewards": [],
             "status": "Active",
             "start": "July 26, 2021",
-            "end": "August 18, 2021"
+            "end": "January 5, 2022"
         },
         {
             "promotional_code": "GENSHINGIFT",
@@ -60,7 +34,7 @@
             ],
             "status": "Active",
             "start": "November 10, 2020",
-            "end": "August 2, 2021"
+            "end": null
         },
         {
             "promotional_code": "CrucialGames (Giveaway)",

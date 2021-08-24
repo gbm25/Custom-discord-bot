@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from secrets import channel_dc_pruebas
 import scraping_genshin_impact as sgi
+import GI_templates as MessageTemplate
 
 
 class GenshinImpactModule(commands.Cog):
@@ -17,6 +18,9 @@ class GenshinImpactModule(commands.Cog):
         print('Lanzando el bucle genshin_impact_new_codes()')
         self.genshin_impact_new_codes.start()
         print('------')
+        print('Lanzando el bucle genshin_impact_new_banner_info()')
+        self.genshin_impact_new_banner_info.start()
+        print('------')
 
     @tasks.loop(hours=2)
     async def genshin_impact_new_codes(self):
@@ -29,8 +33,13 @@ class GenshinImpactModule(commands.Cog):
             embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
             embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
             embed.add_field(name="Servidor", value=code_line.server, inline=False)
-            embed.add_field(name="Recompensas", value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
-                                                                   in code_line.rewards]), inline=False)
+            if code_line.rewards:
+                embed.add_field(name="Recompensas",
+                                value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
+                                                   in code_line.rewards]
+                                                  ), inline=False)
+            else:
+                embed.add_field(name="Recompensas", value="Recompensa no especificada", inline=False)
             embed.add_field(name="Estado", value=code_line.status, inline=False)
             embed.add_field(name="Descubierto", value=code_line.start, inline=False)
             embed.add_field(name="Expira", value=code_line.end, inline=False)
@@ -47,14 +56,58 @@ class GenshinImpactModule(commands.Cog):
                 embed.add_field(name="Código promocional", value=code_line.promotional_code, inline=False)
                 embed.add_field(name="Enlace externo", value=code_line.external_link, inline=False)
                 embed.add_field(name="Servidor", value=code_line.server, inline=False)
-                embed.add_field(name="Recompensas",
-                                value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
-                                                   in code_line.rewards]), inline=False)
+                if code_line.rewards:
+                    embed.add_field(name="Recompensas",
+                                    value="\r\n".join([f'- {reward.item_name} x{reward.quantity}' for reward
+                                                       in code_line.rewards]
+                                                      ), inline=False)
+                else:
+                    embed.add_field(name="Recompensas", value="Recompensa no especificada", inline=False)
                 embed.add_field(name="Estado", value=code_line.status, inline=False)
                 embed.add_field(name="Descubierto", value=code_line.start, inline=False)
                 embed.add_field(name="Expira", value=code_line.end, inline=False)
 
                 await ctx.send(embed=embed)
+
+    @commands.command(name="GenshinBanners")
+    async def get_genshin_banners(self, ctx, filter=None):
+        valid_current_filters = ["Current", "Currents", "Actual", "Actuales"]
+        valid_upcoming_filters = ["Upcoming", "Upcomings", "Futuro", "Futuros"]
+        if filter and filter.capitalize() not in valid_current_filters + valid_upcoming_filters:
+            return await ctx.send(f"Filtro incorrecto, se esperaba uno de los siguientes:"
+                                  f"{valid_current_filters + valid_upcoming_filters}")
+
+        if filter and filter.capitalize() in valid_current_filters:
+            banners = self.genshin_data.get_current_banners()
+        elif filter and filter.capitalize() in valid_upcoming_filters:
+            banners = self.genshin_data.get_upcoming_banners()
+        else:
+            banners = self.genshin_data.get_current_banners() + self.genshin_data.get_upcoming_banners()
+
+        if banners:
+            for banner in banners:
+                embed_title = "Banner {}".format("actual" if banner.status == "Current" else "futuro")
+                message = MessageTemplate.generate_banner_message(embed_title, banner)
+
+                await ctx.send(embed=message)
+        else:
+            await ctx.send("Actualmente no existe información sobre los banners actuales y futuros")
+
+    @tasks.loop(hours=2)
+    async def genshin_impact_new_banner_info(self):
+        canal_genshin = self.bot.get_channel(channel_dc_pruebas)
+        new_banners = self.genshin_data.check_new_banners()
+
+        if new_banners['currents']:
+            for banner in new_banners['currents']:
+                message = MessageTemplate.generate_banner_message("Nuevo banner actual/Nueva información", banner)
+                await canal_genshin.send(embed=message)
+
+        if new_banners['upcoming']:
+            for banner in new_banners['upcoming']:
+                message = MessageTemplate.generate_banner_message("Nuevo banner futuro/Nueva información", banner)
+                await canal_genshin.send(embed=message)
+
 
 def setup(bot):
     bot.add_cog(GenshinImpactModule(bot))

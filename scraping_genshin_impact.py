@@ -3,14 +3,20 @@ from bs4 import BeautifulSoup
 import re
 from GI_code import GenshinCode
 from GI_reward import GenshinReward
+from GI_banner import GenshinBanner
 import data_management
 
 
 class GenshinImpact:
     codes = None
     banners = None
-    codes_active_bgcolor = "#9F9"
+
+    codes_active_bgcolor_hex = "#9F9"
+    codes_active_bg_color_rgb = "153,255,153"
     url_codes = "https://genshin-impact.fandom.com/wiki/Promotional_Codes"
+
+    base_fandom_url = "https://genshin-impact.fandom.com"
+    base_banners_url = "https://genshin-impact.fandom.com/wiki/Wishes/List"
 
     def __init__(self):
         """Cuando se llama al constructor de la clase, lo primero que se fetchea es la copia local de los datos"""
@@ -25,7 +31,7 @@ class GenshinImpact:
         if not self.codes:
             self.codes["codes"] = []
 
-        self.banners = data_management.deserialization_json("./Data/", "GI_banners_data")
+        self.banners = data_management.json_to_genshin_banners("./Data/", "GI_banners_data")
         # Si no existen datos se crea el diccionario con la entrada vacía
         if not self.banners:
             self.banners["banners"] = []
@@ -34,7 +40,7 @@ class GenshinImpact:
         """Guarda los datos en archivos locales"""
 
         data_management.genshin_codes_to_json("./Data/", "GI_codes_data", self.codes)
-        data_management.serialization_json("./Data/", "GI_banners_data", self.banners)
+        data_management.genshin_banners_to_json("./Data/", "GI_banners_data", self.banners)
 
     def scrap_codes(self):
         """Realiza scraping en la wiki de Genshin impact para recolectar datos sobre los códigos promocionales"""
@@ -143,7 +149,8 @@ class GenshinImpact:
             # Si el atributo de clase que contiene el color de las lineas activas se encuentra el atributo "style" de
             # alguna etiqueta html de la cuarta columna, el estado es activo y se establece como "Active" en el objeto.
             # De no ser asi, se considerá como expirado y se establece como "Expired" en el objeto.
-            if f"background-color:{self.codes_active_bgcolor}" in columns[3].attrs['style']:
+            if f"background-color:{self.codes_active_bgcolor_hex}" in columns[3].attrs['style'] \
+                    or f"background-color:rgb({self.codes_active_bg_color_rgb}" in columns[3].attrs['style']:
                 genshin_code_data.status = "Active"
             else:
                 genshin_code_data.status = "Expired"
@@ -239,3 +246,156 @@ class GenshinImpact:
         if new_scraped_codes != self.codes or force:
             self.codes = new_scraped_codes
             self.save_data()
+
+    @staticmethod
+    def extract_banner_info_fandom(url):
+
+        def get_datetime_format(datetime_str: str):
+            datetime_format = '%B %d, %Y %I:%M:%S %p'
+
+            if ' UTC' in datetime_str.upper() or ' GMT' in datetime_str.upper():
+                datetime_format += ' %Z'
+            if '+' in datetime_str or '-' in datetime_str:
+                datetime_format += '%z'
+            return datetime_format
+
+        def normalize_datetime_offset(datetime_str: str):
+            datetime_str = datetime_str.strip()
+            offset_time = None
+            offset_simbol = None
+            if "+" in datetime_str:
+                offset_simbol = '+'
+                offset_time = datetime_str.split("+")[1]
+            elif "-" in datetime_str:
+                offset_simbol = '-'
+                offset_time = datetime_str.split("-")[1]
+
+            if offset_time:
+                if len(offset_time) == 1:
+                    return f'{datetime_str.split(offset_simbol)[0]}{offset_simbol}0{offset_time}00'
+                else:
+                    return f'{datetime_str.split(offset_simbol)[0]}{offset_simbol}{offset_time}00'
+            return datetime_str
+
+        fandom_page = requests.get(url)
+        source = BeautifulSoup(fandom_page.content, "html.parser")
+
+        banner_data = GenshinBanner()
+
+        banner_data.name = source.find(id="firstHeading").text.strip().split('/')[0]
+        banner_data.url_fandom = url
+
+        event_body = source.find("div", {"class": "mw-parser-output"}).findChildren(recursive=False)
+
+        if event_body[0].find("a", {"class": "image"}):
+            banner_data.image = event_body[0].find("a", {"class": "image"}).get('href')
+
+        duration = None
+        official_url = None
+        date_format = r'(\w+\s\d{1,2},\s\d{4}\s(?:\d{2}:?)+(?:\w|\s|\+|-)*)'
+
+        for element in event_body:
+            if "Duration:" in element.get_text():
+                duration = element.get_text().split('\n')
+                continue
+            if "Official announcement" in element.get_text():
+                official_url = element.a.get('href')
+
+        if duration:
+            matches = re.findall(date_format, duration[0])
+
+            start = normalize_datetime_offset(matches[0])
+            start_format = get_datetime_format(matches[0])
+
+            banner_data.set_start_time(start, start_format)
+
+            end = normalize_datetime_offset(matches[1])
+            end_format = get_datetime_format(matches[1])
+
+            banner_data.set_end_time(end, end_format)
+
+        banner_data.url_official = official_url
+
+        return banner_data
+
+    def banners_table_to_dict(self, table, status: str):
+        banners = []
+
+        if not table:
+            return banners
+
+        banners_columns = table.find_all('td')
+
+        if banners_columns:
+            for banner in banners_columns:
+
+                if banner.a:
+                    fandom_url = f'https://genshin-impact.fandom.com{banner.a.get("href")}'
+                    banner_data = self.extract_banner_info_fandom(fandom_url)
+                else:
+                    banner_data = GenshinBanner(name=banner.span.text)
+
+                if "Epitome" in banner_data.name:
+                    banner_data.wish_type = "Weapon"
+                else:
+                    banner_data.wish_type = "Character"
+
+                banner_data.status = status
+
+                banners.append(banner_data)
+
+        return banners
+
+    def scrap_banners_table(self, banner_status: str):
+        banner_status = banner_status.capitalize()
+
+        if banner_status not in ["Current", "Upcoming"]:
+            raise ValueError("WonK ! Current or Upcoming expected")
+
+        request = requests.get(self.base_banners_url)
+        source = BeautifulSoup(request.content, "html.parser")
+
+        banners = source.find(id=f'{banner_status}').parent.next_siblings
+
+        for banner_html in banners:
+
+            if not banner_html or banner_html == "\n" or banner_html == " ":
+                continue
+
+            else:
+                return self.banners_table_to_dict(banner_html, banner_status)
+
+        return []
+
+    def check_new_banners(self):
+        """Comprueba si hay cambios en las tablas de banners activos (Current) o por venir (Upcoming), actualizando
+        los datos del atributo y guardándolos en ficheros locales. Devuelve un diccionario con claves "currents" y
+        "upcoming" que contienen los banners nuevos para cada sección"""
+
+        new_scraped_banners_current = self.scrap_banners_table("current")
+        new_scraped_banners_upcoming = self.scrap_banners_table("upcoming")
+
+        new_scraped_banners = {'banners': new_scraped_banners_current + new_scraped_banners_upcoming}
+
+        new_banners_current = []
+        new_banners_upcoming = []
+
+        for banner in new_scraped_banners_current:
+            if banner not in self.banners['banners']:
+                new_banners_current.append(banner)
+
+        for banner in new_scraped_banners_upcoming:
+            if banner not in self.banners['banners'] and banner.url_fandom:
+                new_banners_upcoming.append(banner)
+
+        if self.banners != new_scraped_banners:
+            self.banners = new_scraped_banners
+            self.save_data()
+
+        return {"currents": new_banners_current, "upcoming": new_banners_upcoming}
+
+    def get_current_banners(self):
+        return [banner for banner in self.banners['banners'] if banner.status == "Current" and banner.url_fandom]
+
+    def get_upcoming_banners(self):
+        return [banner for banner in self.banners['banners'] if banner.status == "Upcoming" and banner.url_fandom]

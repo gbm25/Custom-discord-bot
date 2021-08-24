@@ -1,0 +1,168 @@
+{
+    "banners": [
+        {
+            "name": "Tapestry of Golden Flames",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Tapestry_of_Golden_Flames/2021-08-10",
+            "url_official": "https://www.hoyolab.com/genshin/article/661064",
+            "status": "Current",
+            "wish_type": "Character",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Wish_Tapestry_of_Golden_Flames_2021-08-10.png/revision/latest?cb=20210808040355",
+            "start": [
+                {
+                    "datetime": "2021-08-11T00:00:00+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-08-10T18:00:00+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-08-10T12:00:00-04:00",
+                    "region": "north_america"
+                }
+            ],
+            "end": [
+                {
+                    "datetime": "2021-08-31T14:59:59+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-08-31T14:59:59+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-08-31T14:59:59-04:00",
+                    "region": "north_america"
+                }
+            ]
+        },
+        {
+            "name": "Epitome Invocation",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2021-08-10",
+            "url_official": "https://www.hoyolab.com/genshin/article/661045",
+            "status": "Current",
+            "wish_type": "Weapon",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Wish_Epitome_Invocation_2021-08-10.png/revision/latest?cb=20210808040356",
+            "start": [
+                {
+                    "datetime": "2021-08-11T00:00:00+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-08-10T18:00:00+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-08-10T12:00:00-04:00",
+                    "region": "north_america"
+                }
+            ],
+            "end": [
+                {
+                    "datetime": "2021-08-31T14:59:59+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-08-31T14:59:59+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-08-31T14:59:59-04:00",
+                    "region": "north_america"
+                }
+            ]
+        },
+        {
+            "name": "Reign of Serenity",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Reign_of_Serenity/2021-09-01",
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Character",
+            "image": null,
+            "start": [
+                {
+                    "datetime": "2021-09-01T11:00:00+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-09-01T05:00:00+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-08-31T23:00:00-04:00",
+                    "region": "north_america"
+                }
+            ],
+            "end": [
+                {
+                    "datetime": "2021-09-21T17:59:59+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-09-21T17:59:59+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-09-21T17:59:59-04:00",
+                    "region": "north_america"
+                }
+            ]
+        },
+        {
+            "name": "Epitome Invocation",
+            "url_fandom": null,
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Weapon",
+            "image": null,
+            "start": [],
+            "end": []
+        },
+        {
+            "name": "Drifting Luminescence",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Drifting_Luminescence/2021-09-21",
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Character",
+            "image": null,
+            "start": [
+                {
+                    "datetime": "2021-09-21T11:00:00+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-09-21T05:00:00+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-09-20T23:00:00-04:00",
+                    "region": "north_america"
+                }
+            ],
+            "end": [
+                {
+                    "datetime": "2021-10-12T14:59:59+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2021-10-12T14:59:59+02:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2021-10-12T14:59:59-04:00",
+                    "region": "north_america"
+                }
+            ]
+        },
+        {
+            "name": "Epitome Invocation",
+            "url_fandom": null,
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Weapon",
+            "image": null,
+            "start": [],
+            "end": []
+        }
+    ]
+}
