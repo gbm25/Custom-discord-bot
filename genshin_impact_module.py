@@ -18,6 +18,9 @@ class GenshinImpactModule(commands.Cog):
         print('Lanzando el bucle genshin_impact_new_codes()')
         self.genshin_impact_new_codes.start()
         print('------')
+        print('Lanzando el bucle genshin_impact_new_banner_info()')
+        self.genshin_impact_new_banner_info.start()
+        print('------')
 
     @tasks.loop(hours=2)
     async def genshin_impact_new_codes(self):
@@ -67,9 +70,19 @@ class GenshinImpactModule(commands.Cog):
                 await ctx.send(embed=embed)
 
     @commands.command(name="GenshinBanners")
-    async def get_genshin_banners(self, ctx):
+    async def get_genshin_banners(self, ctx, filter=None):
+        valid_current_filters = ["Current", "Currents", "Actual", "Actuales"]
+        valid_upcoming_filters = ["Upcoming", "Upcomings", "Futuro", "Futuros"]
+        if filter and filter.capitalize() not in valid_current_filters + valid_upcoming_filters:
+            return await ctx.send(f"Filtro incorrecto, se esperaba uno de los siguientes:"
+                                  f"{valid_current_filters + valid_upcoming_filters}")
 
-        banners = self.genshin_data.get_upcoming_banners() + self.genshin_data.get_current_banners()
+        if filter and filter.capitalize() in valid_current_filters:
+            banners = self.genshin_data.get_current_banners()
+        elif filter and filter.capitalize() in valid_upcoming_filters:
+            banners = self.genshin_data.get_upcoming_banners()
+        else:
+            banners = self.genshin_data.get_current_banners() + self.genshin_data.get_upcoming_banners()
 
         if banners:
             for banner in banners:
@@ -79,7 +92,6 @@ class GenshinImpactModule(commands.Cog):
                 await ctx.send(embed=message)
         else:
             await ctx.send("Actualmente no existe información sobre los banners actuales y futuros")
-
 
     @tasks.loop(hours=2)
     async def genshin_impact_new_banner_info(self):
