@@ -70,16 +70,16 @@ class GenshinImpactModule(commands.Cog):
                 await ctx.send(embed=embed)
 
     @commands.command(name="GenshinBanners")
-    async def get_genshin_banners(self, ctx, filter=None):
+    async def get_genshin_banners(self, ctx, time_filter=None):
         valid_current_filters = ["Current", "Currents", "Actual", "Actuales"]
         valid_upcoming_filters = ["Upcoming", "Upcomings", "Futuro", "Futuros"]
-        if filter and filter.capitalize() not in valid_current_filters + valid_upcoming_filters:
+        if time_filter and time_filter.capitalize() not in valid_current_filters + valid_upcoming_filters:
             return await ctx.send(f"Filtro incorrecto, se esperaba uno de los siguientes:"
                                   f"{valid_current_filters + valid_upcoming_filters}")
 
-        if filter and filter.capitalize() in valid_current_filters:
+        if time_filter and time_filter.capitalize() in valid_current_filters:
             banners = self.genshin_data.get_current_banners()
-        elif filter and filter.capitalize() in valid_upcoming_filters:
+        elif time_filter and time_filter.capitalize() in valid_upcoming_filters:
             banners = self.genshin_data.get_upcoming_banners()
         else:
             banners = self.genshin_data.get_current_banners() + self.genshin_data.get_upcoming_banners()

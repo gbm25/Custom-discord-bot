@@ -1,7 +1,6 @@
 import discord
-from discord.ext import commands, tasks
+from discord.ext import commands
 from secrets import token
-import genshin_impact_module
 
 
 TOKEN = token
@@ -23,7 +22,7 @@ async def on_ready():
 async def set_satisfactory_channel(ctx, satis_channel=""):
     """Define el canal en el que se realizarán las acciones relacionadas con Satisfactory"""
 
-    await ctx.send("No te voy a mentir, esto aun no esta implementado")
+    await ctx.send(f"No te voy a mentir, esto aun no esta implementado, y {satis_channel} no se usa")
 
 
 @bot.command(name="ListChannels")

@@ -19,10 +19,10 @@ class GenshinBanner:
         self.status = status
 
         self.start = []
-        if start and not isinstance(start,list):
+        if start and not isinstance(start, list):
             for region in servers_timezone.keys():
                 self.start.append(GenshinImpactServerTime(region, start, start_format))
-        elif start and isinstance(start,list):
+        elif start and isinstance(start, list):
             if len(start) != len(servers_timezone.keys()):
                 raise ValueError(f'start attribute has {len(start)} times/regions,{len(servers_timezone.keys())}'
                                  f' are needed ({servers_timezone.keys()})')
@@ -30,10 +30,10 @@ class GenshinBanner:
                 self.start = start
 
         self.end = []
-        if end and not isinstance(end,list):
+        if end and not isinstance(end, list):
             for region in servers_timezone.keys():
                 self.end.append(GenshinImpactServerTime(region, end, end_format))
-        elif end and isinstance(end,list):
+        elif end and isinstance(end, list):
             if len(end) != len(servers_timezone.keys()):
                 raise ValueError(f'end attribute has {len(end)} times/regions,{len(servers_timezone.keys())}'
                                  f' are needed ({servers_timezone.keys()})')
@@ -45,7 +45,7 @@ class GenshinBanner:
 
     def __eq__(self, other):
         if isinstance(other, GenshinBanner):
-            return (self.name, self.status,self.url_fandom) == (other.name, other.status,other.url_fandom)
+            return (self.name, self.status, self.url_fandom) == (other.name, other.status, other.url_fandom)
         return False
 
     def remain_time(self, server, normalize_delta=False):
@@ -66,14 +66,15 @@ class GenshinBanner:
             else:
                 return None
 
-    def time_until(self,server, normalize_delta=False):
+    def time_until(self, server, normalize_delta=False):
         if server not in servers_timezone.keys():
             raise ValueError(f'{server} is not a valid option for parameter "server".'
                              f'The value must be one of {servers_timezone.keys()}')
         else:
             if self.start:
                 server_start_time = \
-                    [genshin_server_time for genshin_server_time in self.start if genshin_server_time.region == server][0]
+                    [genshin_server_time for genshin_server_time in self.start if genshin_server_time.region == server][
+                        0]
 
                 if normalize_delta:
                     return str(server_start_time.server_time - GenshinDatetime.now().to_server(
