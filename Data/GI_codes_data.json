@@ -37,6 +37,60 @@
             "end": null
         },
         {
+            "promotional_code": "NTPVU7JTJYPD",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "August 20, 2021",
+            "end": "August 21, 2021"
+        },
+        {
+            "promotional_code": "CB7UU6KT2H59",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "August 20, 2021",
+            "end": "August 21, 2021"
+        },
+        {
+            "promotional_code": "DSPVUN2BKH5M",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "August 20, 2021",
+            "end": "August 21, 2021"
+        },
+        {
             "promotional_code": "CrucialGames (Giveaway)",
             "external_link": "https://games.crucial.com/promotions/2140546853/genshin-impact-50-primogems-v16-giveaway",
             "server": "All",
