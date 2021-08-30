@@ -287,11 +287,9 @@ class GenshinImpact:
 
         event_body = source.find("div", {"class": "mw-parser-output"}).findChildren(recursive=False)
 
-        if event_body[0].find("a", {"class": "image"}):
-            banner_data.image = event_body[0].find("a", {"class": "image"}).get('href')
-
         duration = None
         official_url = None
+        image = None
         date_format = r'(\w+\s\d{1,2},\s\d{4}\s(?:\d{2}:?)+(?:\w|\s|\+|-)*)'
 
         for element in event_body:
@@ -300,6 +298,8 @@ class GenshinImpact:
                 continue
             if "Official announcement" in element.get_text():
                 official_url = element.a.get('href')
+            if element.find("a", {"class": "image"}):
+                image = element.find("a", {"class": "image"}).get('href')
 
         if duration:
             matches = re.findall(date_format, duration[0])
@@ -314,6 +314,7 @@ class GenshinImpact:
 
             banner_data.set_end_time(end, end_format)
 
+        banner_data.image = image
         banner_data.url_official = official_url
 
         return banner_data
