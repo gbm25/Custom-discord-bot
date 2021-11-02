@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-from GI_code import GenshinCode
-from GI_reward import GenshinReward
-from GI_banner import GenshinBanner
+from Games.Genshin_Impact.GI_code import GenshinCode
+from Games.Genshin_Impact.GI_reward import GenshinReward
+from Games.Genshin_Impact.GI_banner import GenshinBanner
 import data_management
 
 
@@ -26,12 +26,12 @@ class GenshinImpact:
     def load_saved_data(self):
         """Carga los datos almacenados de forma local"""
 
-        self.codes = data_management.json_to_genshin_codes("./Data/", "GI_codes_data")
+        self.codes = data_management.json_to_genshin_codes("../../Data/", "GI_codes_data")
         # Si no existen datos se crea el diccionario con la entrada vacía
         if not self.codes:
             self.codes["codes"] = []
 
-        self.banners = data_management.json_to_genshin_banners("./Data/", "GI_banners_data")
+        self.banners = data_management.json_to_genshin_banners("../../Data/", "GI_banners_data")
         # Si no existen datos se crea el diccionario con la entrada vacía
         if not self.banners:
             self.banners["banners"] = []
@@ -39,8 +39,8 @@ class GenshinImpact:
     def save_data(self):
         """Guarda los datos en archivos locales"""
 
-        data_management.genshin_codes_to_json("./Data/", "GI_codes_data", self.codes)
-        data_management.genshin_banners_to_json("./Data/", "GI_banners_data", self.banners)
+        data_management.genshin_codes_to_json("../../Data/", "GI_codes_data", self.codes)
+        data_management.genshin_banners_to_json("../../Data/", "GI_banners_data", self.banners)
 
     def scrap_codes(self):
         """Realiza scraping en la wiki de Genshin impact para recolectar datos sobre los códigos promocionales"""
@@ -400,3 +400,16 @@ class GenshinImpact:
 
     def get_upcoming_banners(self):
         return [banner for banner in self.banners['banners'] if banner.status == "Upcoming" and banner.url_fandom]
+
+    def refresh_banners(self, force=False):
+        """Comprueba si hay cambios en las tablas de banners activos (Current) o por venir (Upcoming), actualizando
+        los datos del atributo y guardándolos en ficheros locales si existen diferencias o si se fuerza a actualizar."""
+
+        new_scraped_banners_current = self.scrap_banners_table("current")
+        new_scraped_banners_upcoming = self.scrap_banners_table("upcoming")
+
+        new_scraped_banners = {'banners': new_scraped_banners_current + new_scraped_banners_upcoming}
+
+        if self.banners != new_scraped_banners or force:
+            self.banners = new_scraped_banners
+            self.save_data()
