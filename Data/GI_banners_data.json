@@ -1,194 +1,148 @@
 {
     "banners": [
         {
-            "name": "Tapestry of Golden Flames",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Tapestry_of_Golden_Flames/2021-08-10",
-            "url_official": "https://genshin.mihoyo.com/en/news/detail/14773",
+            "name": "Farewell of Snezhnaya",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Farewell_of_Snezhnaya/2021-10-13",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/16388",
             "status": "Current",
             "wish_type": "Character",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/10/Wish_Tapestry_of_Golden_Flames_2021-08-10.png/revision/latest?cb=20210808040355",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Wish_Farewell_of_Snezhnaya_2021-10-13.png/revision/latest?cb=20211011040321",
             "start": [
                 {
-                    "datetime": "2021-08-11T00:00:00+08:00",
+                    "datetime": "2021-10-13T11:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-08-10T18:00:00+02:00",
+                    "datetime": "2021-10-13T05:00:00+02:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-08-10T12:00:00-04:00",
+                    "datetime": "2021-10-12T23:00:00-04:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2021-08-31T14:59:59+08:00",
+                    "datetime": "2021-11-02T17:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-08-31T14:59:59+02:00",
+                    "datetime": "2021-11-02T17:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-08-31T14:59:59-04:00",
+                    "datetime": "2021-11-02T17:59:59-04:00",
                     "region": "north_america"
                 }
             ]
         },
         {
             "name": "Epitome Invocation",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2021-08-10",
-            "url_official": "https://www.hoyolab.com/genshin/article/661045",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2021-10-13",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/16391",
             "status": "Current",
             "wish_type": "Weapon",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/a8/Wish_Epitome_Invocation_2021-08-10.png/revision/latest?cb=20210808040356",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/7/72/Wish_Epitome_Invocation_2021-10-13.png/revision/latest?cb=20211011040323",
             "start": [
                 {
-                    "datetime": "2021-08-11T00:00:00+08:00",
+                    "datetime": "2021-10-13T11:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-08-10T18:00:00+02:00",
+                    "datetime": "2021-10-13T05:00:00+02:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-08-10T12:00:00-04:00",
+                    "datetime": "2021-10-12T23:00:00-04:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2021-08-31T14:59:59+08:00",
+                    "datetime": "2021-11-02T17:59:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-08-31T14:59:59+02:00",
+                    "datetime": "2021-11-02T17:59:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-08-31T14:59:59-04:00",
+                    "datetime": "2021-11-02T17:59:00-04:00",
                     "region": "north_america"
                 }
             ]
         },
         {
-            "name": "Reign of Serenity",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Reign_of_Serenity/2021-09-01",
-            "url_official": "https://genshin.mihoyo.com/en/news/detail/15391",
+            "name": "Moment of Bloom",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Moment_of_Bloom/2021-11-02",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/16822",
             "status": "Upcoming",
             "wish_type": "Character",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Wish_Reign_of_Serenity_2021-09-01.png/revision/latest?cb=20210830040252",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/9/95/Wish_Moment_of_Bloom_2021-11-02.png/revision/latest?cb=20211031041911",
             "start": [
                 {
-                    "datetime": "2021-09-01T11:00:00+08:00",
+                    "datetime": "2021-11-03T01:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-09-01T05:00:00+02:00",
+                    "datetime": "2021-11-02T18:00:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-08-31T23:00:00-04:00",
+                    "datetime": "2021-11-02T13:00:00-04:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2021-09-21T17:59:59+08:00",
+                    "datetime": "2021-11-23T14:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-09-21T17:59:59+02:00",
+                    "datetime": "2021-11-23T14:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-09-21T17:59:59-04:00",
+                    "datetime": "2021-11-23T14:59:59-05:00",
                     "region": "north_america"
                 }
             ]
         },
         {
             "name": "Epitome Invocation",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2021-09-01",
-            "url_official": "https://genshin.mihoyo.com/en/news/detail/15390",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2021-11-02",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/16821",
             "status": "Upcoming",
             "wish_type": "Weapon",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Wish_Epitome_Invocation_2021-09-01.png/revision/latest?cb=20210830040250",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f6/Wish_Epitome_Invocation_2021-11-02.png/revision/latest?cb=20211031042249",
             "start": [
                 {
-                    "datetime": "2021-09-01T11:00:00+08:00",
+                    "datetime": "2021-11-03T01:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-09-01T05:00:00+02:00",
+                    "datetime": "2021-11-02T18:00:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-08-31T23:00:00-04:00",
+                    "datetime": "2021-11-02T13:00:00-04:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2021-09-21T17:59:00+08:00",
+                    "datetime": "2021-11-23T14:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-09-21T17:59:00+02:00",
+                    "datetime": "2021-11-23T14:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-09-21T17:59:00-04:00",
+                    "datetime": "2021-11-23T14:59:59-05:00",
                     "region": "north_america"
                 }
             ]
-        },
-        {
-            "name": "Drifting Luminescence",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Drifting_Luminescence/2021-09-21",
-            "url_official": null,
-            "status": "Upcoming",
-            "wish_type": "Character",
-            "image": null,
-            "start": [
-                {
-                    "datetime": "2021-09-21T11:00:00+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2021-09-21T05:00:00+02:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2021-09-20T23:00:00-04:00",
-                    "region": "north_america"
-                }
-            ],
-            "end": [
-                {
-                    "datetime": "2021-10-12T14:59:59+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2021-10-12T14:59:59+02:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2021-10-12T14:59:59-04:00",
-                    "region": "north_america"
-                }
-            ]
-        },
-        {
-            "name": "Epitome Invocation",
-            "url_fandom": null,
-            "url_official": null,
-            "status": "Upcoming",
-            "wish_type": "Weapon",
-            "image": null,
-            "start": [],
-            "end": []
         }
     ]
 }

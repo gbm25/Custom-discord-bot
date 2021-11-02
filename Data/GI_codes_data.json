@@ -1,13 +1,22 @@
 {
     "codes": [
         {
-            "promotional_code": "Paimon Extension on Twitch",
-            "external_link": "https://www.hoyolab.com/genshin/article/591256",
+            "promotional_code": "BSPD3ZRXU985",
+            "external_link": null,
             "server": "All",
-            "rewards": [],
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "10000"
+                }
+            ],
             "status": "Active",
-            "start": "July 23, 2021",
-            "end": "August 31, 2021"
+            "start": "October 13, 2021",
+            "end": null
         },
         {
             "promotional_code": "Prime Gaming",
@@ -35,6 +44,130 @@
             "status": "Active",
             "start": "November 10, 2020",
             "end": null
+        },
+        {
+            "promotional_code": "CrucialGames (Giveaway)",
+            "external_link": "https://games.crucial.com/promotions/1545757312/genshin-impact-anniversary-celebration-50-primogems-key-giveaway-v21",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "September 24, 2021",
+            "end": "October 13, 2021"
+        },
+        {
+            "promotional_code": "BSNUJGQFUTPM",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "October 3, 2021",
+            "end": "October 4, 2021"
+        },
+        {
+            "promotional_code": "NB6VKHQWVANZ",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "October 3, 2021",
+            "end": "October 4, 2021"
+        },
+        {
+            "promotional_code": "LBNDKG8XDTND",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "October 3, 2021",
+            "end": "October 4, 2021"
+        },
+        {
+            "promotional_code": "Alienware (Giveaway)",
+            "external_link": "https://na.alienwarearena.com/ucf/show/2157343/boards/contest-and-giveaways-global/Giveaway/genshin-impact-anniversary-celebration-50-primogems-key-giveaway-v2-1",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "September 20, 2021",
+            "end": "October 3, 2021"
+        },
+        {
+            "promotional_code": "Steelseries (Giveaway)",
+            "external_link": "https://games.steelseries.com/giveaway/80692181/genshin-impact-v21-50-primogems-giveaway",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "September 20, 2021",
+            "end": "September 27, 2021"
+        },
+        {
+            "promotional_code": "Intel gaming access (Giveaway)",
+            "external_link": "https://game.intel.com/ww/giveaways/genshin-impact-v21-50-primogems-giveaway",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "September 24, 2021",
+            "end": "September 24, 2021"
+        },
+        {
+            "promotional_code": "Paimon Extension on Twitch",
+            "external_link": "https://www.hoyolab.com/genshin/article/591256",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60(See"
+                }
+            ],
+            "status": "Expired",
+            "start": "July 23, 2021",
+            "end": "August 31, 2021"
         },
         {
             "promotional_code": "NTPVU7JTJYPD",
@@ -230,7 +363,7 @@
             ],
             "status": "Expired",
             "start": "June 25, 2021",
-            "end": null
+            "end": "July 21, 2021"
         },
         {
             "promotional_code": "SBNBUK67M37Z",
