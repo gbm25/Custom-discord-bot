@@ -1,8 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 from secrets import channel_dc_pruebas
-import scraping_genshin_impact as sgi
-import GI_templates as MessageTemplate
+from Games.Genshin_Impact import GI_templates as MessageTemplate, scraping_genshin_impact as sgi
 
 
 class GenshinImpactModule(commands.Cog):

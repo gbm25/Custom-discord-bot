@@ -2,7 +2,7 @@ from typing import Union
 
 from datetime import datetime
 
-from GI_datetime import GenshinDatetime, servers_timezone
+from Games.Genshin_Impact.GI_datetime import GenshinDatetime, servers_timezone
 
 
 class GenshinImpactServerTime:

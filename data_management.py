@@ -2,10 +2,10 @@ import json
 import os
 from datetime import datetime
 
-from GI_code import GenshinCode
-from GI_reward import GenshinReward
-from GI_banner import GenshinBanner
-from GI_servertime import GenshinImpactServerTime
+from Games.Genshin_Impact.GI_code import GenshinCode
+from Games.Genshin_Impact.GI_reward import GenshinReward
+from Games.Genshin_Impact.GI_banner import GenshinBanner
+from Games.Genshin_Impact.GI_servertime import GenshinImpactServerTime
 
 
 def serialization_json(relative_path, file, data):

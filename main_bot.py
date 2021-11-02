@@ -9,7 +9,7 @@ description = '''Croquetabot ! recién salido de la sartén 😁'''
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
-bot.load_extension('genshin_impact_module')
+bot.load_extension('Modules.genshin_impact_module')
 
 
 @bot.event
