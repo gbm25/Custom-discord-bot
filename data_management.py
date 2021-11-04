@@ -6,13 +6,14 @@ from Games.Genshin_Impact.GI_code import GenshinCode
 from Games.Genshin_Impact.GI_reward import GenshinReward
 from Games.Genshin_Impact.GI_banner import GenshinBanner
 from Games.Genshin_Impact.GI_servertime import GenshinImpactServerTime
+from config import bot_root_dir
 
 
 def serialization_json(relative_path, file, data):
     # if no empty parameter
     if relative_path and file and data:
         # Open file to write
-        with open(f'{relative_path}{file}.json', 'w+') as write:
+        with open(f'{bot_root_dir}/{relative_path}{file}.json', 'w+') as write:
             json.dump(data, write, indent=4)
 
 
@@ -20,9 +21,9 @@ def deserialization_json(relative_path, file):
     try:
         data = {}
         # if no empty parameter
-        if relative_path and file and os.path.exists(f'{relative_path}{file}.json'):
+        if relative_path and file and os.path.exists(f'{bot_root_dir}/{relative_path}{file}.json'):
             # Open JSON file
-            json_file = open(f'{relative_path}{file}.json', )
+            json_file = open(f'{bot_root_dir}/{relative_path}{file}.json', )
             # JSON object as a dictionary
             data = json.load(json_file)
 
@@ -43,7 +44,7 @@ def genshin_codes_to_json(relative_path, file, data):
             temp_dict = {'codes': [code.asdict() for code in data['codes']]}
 
             # Open file to write
-            with open(f'{relative_path}{file}.json', 'w+') as write:
+            with open(f'{bot_root_dir}/{relative_path}{file}.json', 'w+') as write:
                 json.dump(temp_dict, write, indent=4)
 
     except json.JSONDecodeError:
@@ -55,9 +56,9 @@ def json_to_genshin_codes(relative_path, file):
     try:
         data = {}
         # if no empty parameter adn file exists
-        if relative_path and file and os.path.exists(f'{relative_path}{file}.json'):
+        if relative_path and file and os.path.exists(f'{bot_root_dir}/{relative_path}{file}.json'):
             # Open JSON file
-            json_file = open(f'{relative_path}{file}.json', )
+            json_file = open(f'{bot_root_dir}/{relative_path}{file}.json', )
             # JSON object as a dictionary
             data = json.load(json_file)
 
@@ -91,7 +92,7 @@ def genshin_banners_to_json(relative_path, file, data):
             temp_dict = {'banners': [banner.asdict() for banner in data['banners']]}
 
             # Open file to write
-            with open(f'{relative_path}{file}.json', 'w+') as write:
+            with open(f'{bot_root_dir}/{relative_path}{file}.json', 'w+') as write:
                 json.dump(temp_dict, write, indent=4)
 
     except json.JSONDecodeError:
@@ -103,9 +104,9 @@ def json_to_genshin_banners(relative_path, file):
     try:
         data = {}
         # if no empty parameter adn file exists
-        if relative_path and file and os.path.exists(f'{relative_path}{file}.json'):
+        if relative_path and file and os.path.exists(f'{bot_root_dir}/{relative_path}{file}.json'):
             # Open JSON file
-            json_file = open(f'{relative_path}{file}.json', )
+            json_file = open(f'{bot_root_dir}/{relative_path}{file}.json', )
             # JSON object as a dictionary
             data = json.load(json_file)
 

@@ -26,21 +26,20 @@ class GenshinImpact:
     def load_saved_data(self):
         """Carga los datos almacenados de forma local"""
 
-        self.codes = data_management.json_to_genshin_codes("../../Data/", "GI_codes_data")
+        self.codes = data_management.json_to_genshin_codes("Data/", "GI_codes_data")
         # Si no existen datos se crea el diccionario con la entrada vacía
         if not self.codes:
             self.codes["codes"] = []
 
-        self.banners = data_management.json_to_genshin_banners("../../Data/", "GI_banners_data")
+        self.banners = data_management.json_to_genshin_banners("Data/", "GI_banners_data")
         # Si no existen datos se crea el diccionario con la entrada vacía
         if not self.banners:
             self.banners["banners"] = []
 
     def save_data(self):
         """Guarda los datos en archivos locales"""
-
-        data_management.genshin_codes_to_json("../../Data/", "GI_codes_data", self.codes)
-        data_management.genshin_banners_to_json("../../Data/", "GI_banners_data", self.banners)
+        data_management.genshin_codes_to_json("Data/", "GI_codes_data", self.codes)
+        data_management.genshin_banners_to_json("Data/", "GI_banners_data", self.banners)
 
     def scrap_codes(self):
         """Realiza scraping en la wiki de Genshin impact para recolectar datos sobre los códigos promocionales"""
