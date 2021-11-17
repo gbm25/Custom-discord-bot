@@ -281,7 +281,10 @@ class GenshinImpact:
 
         banner_data = GenshinBanner()
 
-        banner_data.name = source.find(id="firstHeading").text.strip().split('/')[0]
+        # Se elimina la fecha del nombre del banner y se limpian los espacios en blanco al principio y al final
+        banner_data.name = re.sub(r'\d{2,4}.\d{2}.\d{2,4}', r'', source.find(id="firstHeading").text.split('/')[0])\
+            .strip()
+
         banner_data.url_fandom = url
 
         event_body = source.find("div", {"class": "mw-parser-output"}).findChildren(recursive=False)
