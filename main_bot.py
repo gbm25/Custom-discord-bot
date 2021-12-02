@@ -2,12 +2,14 @@ import discord
 from discord.ext import commands
 from secrets import token
 
-
 TOKEN = token
 
 description = '''Croquetabot ! recién salido de la sartén 😁'''
 intents = discord.Intents().all()
-bot = commands.Bot(command_prefix='?', description=description, intents=intents)
+
+command_prefix = '!'
+
+bot = commands.Bot(command_prefix=command_prefix, description=description, intents=intents)
 
 bot.load_extension('Modules.genshin_impact_module')
 
@@ -16,6 +18,9 @@ bot.load_extension('Modules.genshin_impact_module')
 async def on_ready():
     print(f'Se ha iniciado {bot.user.name}')
     print('------')
+    print('Se cambia el estado del bot')
+    print('------')
+    await bot.change_presence(activity=discord.Game(name=f'Croquetabot! | {command_prefix}help'))
 
 
 @bot.command(name="SetSatisChannel")
@@ -104,6 +109,8 @@ async def info_channel(ctx):
 @bot.command()
 async def boofear(ctx, *args):
     """Permite boofear intensamente a alguien del canal en el que se usa"""
+
+    await ctx.message.delete()
 
     # Recuperamos el nombre o nick del usuario a boofear
     # En caso de estar compuesto por más de una palabra las juntamos por espacio
