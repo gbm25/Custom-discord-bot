@@ -5,6 +5,18 @@ from config import command_prefix
 import re
 from typing import Union, List
 
+allowed_icons = ["\U00000030\U0000FE0F\U000020E3",
+                 "\U00000031\U0000FE0F\U000020E3",
+                 "\U00000032\U0000FE0F\U000020E3",
+                 "\U00000033\U0000FE0F\U000020E3",
+                 "\U00000034\U0000FE0F\U000020E3",
+                 "\U00000035\U0000FE0F\U000020E3",
+                 "\U00000036\U0000FE0F\U000020E3",
+                 "\U00000037\U0000FE0F\U000020E3",
+                 "\U00000038\U0000FE0F\U000020E3",
+                 "\U00000039\U0000FE0F\U000020E3",
+                 "\U0001F51F"]
+
 TOKEN = token
 
 description = '''Croquetabot ! recién salido de la sartén 😁'''
@@ -14,7 +26,6 @@ intents = discord.Intents().all()
 bot = commands.Bot(command_prefix=command_prefix, description=description, intents=intents)
 
 bot.load_extension('Modules.genshin_impact_module')
-
 
 @bot.event
 async def on_ready():
@@ -199,6 +210,183 @@ async def boofear(ctx, *args):
                        f' o `{command_prefix}boofear @MenciónUsuario`\r\n'
                        f'(Este mensaje se borrará a los 25 segundos de ser publicado.)',
                        delete_after=25.0)
+
+
+@bot.event
+async def on_raw_reaction_add(payload):
+    channel = bot.get_channel(payload.channel_id)
+
+    # Caso en el que la reacción se produzca en un mensaje privado
+    if channel.guild is None:
+        return
+
+    message = await channel.fetch_message(payload.message_id)
+
+    # Comprueba que el mensaje sea del bot, que quien reacciona no sea el bot, y que sea una encuesta
+    if message.author == bot.user and payload.member != bot.user \
+            and message.embeds and message.embeds[0].title.startswith(f"\U0001F4CA Encuesta: "):
+
+        embed = message.embeds[0]
+
+        users_per_icon = {}
+
+        for reaction in message.reactions:
+            users_list = await reaction.users().flatten()
+            users_per_icon[reaction] = users_list
+
+        # Se borran las reacciones con iconos no presentes en la encuesta (reacción no iniciada por el bot)
+        # Se eliminan también (de ser necesario) la clave de ese icono en el diccionario de usuarios por reacción
+        for reaction, users_per_reaction in users_per_icon.copy().items():
+            if bot.user not in users_per_reaction:
+                for user in users_per_reaction:
+                    await reaction.remove(user)
+                del users_per_icon[reaction]
+
+        users_per_reactions = [user for users in users_per_icon.values() for user in users]
+
+        users_more_than_one_reaction = [user for user in set(users_per_reactions)
+                                        if user != bot.user and users_per_reactions.count(user) > 1]
+
+        # Si el usuario tiene mas de una reacción incluida en la encuesta, borra sus reacciones
+        if users_more_than_one_reaction:
+            for reaction, users in users_per_icon.copy().items():
+                users_remove_reaction = [user for user in users_more_than_one_reaction if user in users]
+                if users_remove_reaction:
+                    for user in users_remove_reaction:
+                        await reaction.remove(user)
+                        users_per_icon[reaction].remove(user)
+
+        poll_embed_dict = embed.to_dict()
+
+        # TODO pasar conteo de votos y modificación de la encuesta a una función separada
+
+        # Votos que hay en la encuesta
+        list_votes_last_recount = {field.name.split()[0]: int(field.value.split()[1]) for field in embed.fields}
+        # Votos que hay en las reacciones
+        list_votes_now = {reaction.emoji: len(users_per_reaction) - 1 for reaction, users_per_reaction in
+                          users_per_icon.items()}
+
+        total_votes_now = sum(list_votes_now.values())
+
+        new_fields_data = []
+
+        if list_votes_now != list_votes_last_recount:
+            for reaction, users_per_reaction in users_per_icon.items():
+                reaction_count = len(users_per_reaction) - 1
+                vote_percentage = reaction_count / total_votes_now * 100 if reaction_count > 0 else 0
+
+                target_field = [field for field in embed.to_dict()['fields'] if
+                                field['name'].split()[0] == reaction.emoji]
+
+                if not target_field:
+                    continue
+
+                target_field = target_field[0]
+                # Estructura = ["Votes:", Nº de votos, "(porcentaje%)"]
+                vote_info = target_field['value'].split()
+
+                vote_info[1] = str(reaction_count)
+                vote_info[2] = f'({vote_percentage}%)'
+                target_field['value'] = ' '.join(vote_info)
+
+                new_fields_data.append(target_field)
+
+            poll_embed_dict['fields'] = new_fields_data
+
+            await message.edit(embed=discord.Embed.from_dict(poll_embed_dict))
+
+
+@bot.event
+async def on_raw_reaction_remove(payload):
+    channel = bot.get_channel(payload.channel_id)
+
+    # Caso en el que la reacción se produzca en un mensaje privado
+    if channel.guild is None:
+        return
+
+    message = await channel.fetch_message(payload.message_id)
+
+    if message.author == bot.user and message.embeds and message.embeds[0].title.startswith(f"\U0001F4CA Encuesta: "):
+
+        users_per_icon = {}
+
+        for reaction in message.reactions:
+            users_list = await reaction.users().flatten()
+            users_per_icon[reaction] = users_list
+
+        embed = message.embeds[0]
+
+        poll_embed_dict = embed.to_dict()
+
+        # TODO pasar conteo de votos y modificación de la encuesta a una función separada
+
+        # Votos que hay en la encuesta
+        list_votes_last_recount = {field.name.split()[0]: int(field.value.split()[1]) for field in embed.fields}
+        # Votos que hay en las reacciones
+        list_votes_now = {reaction.emoji: len(users_per_reaction) - 1 for reaction, users_per_reaction in
+                          users_per_icon.items()}
+
+        total_votes_now = sum(list_votes_now.values())
+
+        new_fields_data = []
+
+        if list_votes_now != list_votes_last_recount:
+            for reaction, users_per_reaction in users_per_icon.items():
+                reaction_count = len(users_per_reaction) - 1
+                vote_percentage = reaction_count / total_votes_now * 100 if reaction_count > 0 else 0
+
+                target_field = [field for field in embed.to_dict()['fields'] if
+                                field['name'].split()[0] == reaction.emoji]
+
+                if not target_field:
+                    continue
+
+                target_field = target_field[0]
+                # Estructura = ["Votes:", Nº de votos, "(porcentaje%)"]
+                vote_info = target_field['value'].split()
+
+                vote_info[1] = str(reaction_count)
+                vote_info[2] = f'({vote_percentage}%)'
+                target_field['value'] = ' '.join(vote_info)
+
+                new_fields_data.append(target_field)
+
+            poll_embed_dict['fields'] = new_fields_data
+
+            await message.edit(embed=discord.Embed.from_dict(poll_embed_dict))
+
+
+@bot.command(name="CreatePoll")
+async def poll(ctx, *args):
+    await ctx.message.delete()
+
+    poll_title = args[0]
+    poll_options = args[1:]
+
+    # TODO Forzar los limites de los embebidos
+    # title: 256 characters
+    # description: 4096 characters
+    # fields: Up to 25 field objects
+    # field.name: 256 characters
+    # field.value: 1024 characters
+    # footer.text: 2048 characters
+    # author.name: 256 characters
+
+    if len(poll_options) > len(allowed_icons):
+        await ctx.send("Overflow \U0001F92C", delete_after=15.0)
+        return
+    await ctx.send("Working ...", delete_after=15.0)
+
+    message = [f"{allowed_icons[i]} {option}" for i, option in enumerate(poll_options)]
+
+    embed = discord.Embed(title=f"\U0001F4CA Encuesta: {poll_title}", color=0xf805de)
+    for i in range(len(poll_options)):
+        embed.add_field(name=f"{message[i]}", value="Votos: 0 (0%)", inline=False)
+
+    poll_embed = await ctx.send(embed=embed)
+
+    for i in range(len(poll_options)):
+        await poll_embed.add_reaction(allowed_icons[i])
 
 
 bot.run(TOKEN)
