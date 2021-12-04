@@ -1,6 +1,9 @@
 import discord
 from discord.ext import commands
 from secrets import token
+from config import command_prefix
+import re
+from typing import Union, List
 
 allowed_icons = ["\U00000030\U0000FE0F\U000020E3",
                  "\U00000031\U0000FE0F\U000020E3",
@@ -17,17 +20,20 @@ allowed_icons = ["\U00000030\U0000FE0F\U000020E3",
 TOKEN = token
 
 description = '''Croquetabot ! recién salido de la sartén 😁'''
+
 intents = discord.Intents().all()
-bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 
+bot = commands.Bot(command_prefix=command_prefix, description=description, intents=intents)
 
-# bot.load_extension('Modules.genshin_impact_module')
-
+bot.load_extension('Modules.genshin_impact_module')
 
 @bot.event
 async def on_ready():
     print(f'Se ha iniciado {bot.user.name}')
     print('------')
+    print('Se cambia el estado del bot')
+    print('------')
+    await bot.change_presence(activity=discord.Game(name=f'Croquetabot! | {command_prefix}help'))
 
 
 @bot.command(name="SetSatisChannel")
@@ -117,9 +123,8 @@ async def info_channel(ctx):
 async def boofear(ctx, *args):
     """Permite boofear intensamente a alguien del canal en el que se usa"""
 
-    # Recuperamos el nombre o nick del usuario a boofear
-    # En caso de estar compuesto por más de una palabra las juntamos por espacio
-    target_name = " ".join(args)
+    # Borramos el mensaje que activa el comando
+    await ctx.message.delete()
 
     # Quien invoco al bot
     sender = ctx.author
@@ -130,24 +135,81 @@ async def boofear(ctx, *args):
     # Lista de miembros del canal
     member_list = bot.get_channel(channel.id).members
 
-    # Recuperamos el usuario objetivo si existe
-    target = [target_obj for target_obj in member_list if
-              (target_obj.name == target_name or target_obj.nick == target_name)]
+    def _get_target_user(user_to_search: Union[str, int], channel_members_list: List[discord.Member]):
+        """
+        Devuelve una lista de discord.Member que contiene el/los usuario/s que coincidan con el contenido pasado en
+        el parámetro user_to_search.
 
-    # Si se a podido recuperar el usuario como objeto (y por lo tanto existe)
-    if target:
-        target = target[0]
+        :param user_to_search: user id, name or nick
+        :param channel_members_list: list of members where user_to_search will be search
+
+        :return: list of matched user
+        :rtype: list of discord.Member
+        """
+
+        retrieved_users = []
+
+        # Comprobamos si lo que se nos pasa es un int (id del usuario) o un string (el nombre o nick del usuario)
+        # Dependiendo del tipo, contrastamos contra la lista de miembros que nos pasan filtrando por el id
+        # de los miembros de esa lista, o pr su nombre o nick
+        if isinstance(user_to_search, int):
+            retrieved_users = [member for member in channel_members_list if member.id == user_to_search]
+        elif isinstance(user_to_search, str):
+            retrieved_users = [member for member in channel_members_list if
+                               (member.name == user_to_search or member.nick == user_to_search)]
+
+        return retrieved_users
+
+    targets = []
+
+    for user in args:
+
+        # Comprobamos si el usuario es una mención.
+        # Las menciones pueden tener los siguientes formatos:
+        # <@!00000000000000000> : Si el usuario usa un nick en ese servidor
+        # <@00000000000000000> : Si el usuario no usa un nick en ese servidor
+        # El id de usuario esta formado por 17 o más números
+        user_id_pattern = r'<@!?([0-9]{17,})>'
+
+        user_id = re.match(user_id_pattern, user)
+
+        if user_id and int(user_id.group(1)) in [member.id for member in member_list]:
+            target = _get_target_user(int(user_id.group(1)), member_list)
+        else:
+            target = _get_target_user(user, member_list)
+
+        if len(target) > 1:
+            await ctx.send(f'Existe más de un usuario con el nombre o nick "{user}"'
+                           f'en este servidor, ¡ necesito que te decidas !')
+            return
+        if not target:
+            await ctx.send(f'No encontre a ningún usuario que se llame "{user}".\r\n'
+                           f'Recuerda, el formato es `{command_prefix}boofear "nombre o nick del usuario"`'
+                           f' o `{command_prefix}boofear @MenciónUsuario`\r\n'
+                           f'(Este mensaje se borrará a los 25 segundos de ser publicado.)',
+                           delete_after=25.0)
+            return
+        else:
+            targets.append(*target)
+
+    # Si se ha podido recuperar el usuario como objeto (y por lo tanto existe)
+    if targets:
         # Se comprueba si el nombre del usuario objetivo es igual al del usuario que mando el mensaje
-        if target.name == sender.name:
-            await ctx.send(f'{sender.mention} se ha boofeado a si mismo ! que vanidoso ...')
+        if sender in targets:
+            await ctx.send(f'{sender.mention} ha intentado boofearse a si mismo ! que vanidoso ...')
 
         # En caso de que el nombre del usuario objetivo no sea igual al del usuario que mando el mensaje
         else:
-            await ctx.send(f'{sender.mention} ha boofeado intensamente a {target.mention}!')
+            await ctx.send(f'{sender.mention} ha boofeado intensamente a '
+                           f'{", ".join([user.mention for user in targets])}!')
 
     # Si no se ha podido recuperar ningún usuario
     else:
-        await ctx.send(f'{sender.mention} no ha boofeado a nadie, solo pasaba a molestar, vaya pieza ...')
+        await ctx.send(f'Mmmmm parece que algo ha salido mal ... \r\n'
+                       f'Recuerda, el formato es `{command_prefix}boofear "nombre o nick del usuario"`'
+                       f' o `{command_prefix}boofear @MenciónUsuario`\r\n'
+                       f'(Este mensaje se borrará a los 25 segundos de ser publicado.)',
+                       delete_after=25.0)
 
 
 @bot.event
