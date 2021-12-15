@@ -296,7 +296,8 @@ class GenshinImpact:
 
         for element in event_body:
             if "Duration:" in element.get_text():
-                duration = element.get_text().split('\n')
+                duration = [possible_duration for possible_duration in element.get_text().split('\n')
+                            if possible_duration.startswith("Duration:")]
                 continue
             if "Official announcement" in element.get_text():
                 official_url = element.a.get('href')
@@ -358,15 +359,18 @@ class GenshinImpact:
         request = requests.get(self.base_banners_url)
         source = BeautifulSoup(request.content, "html.parser")
 
-        banners = source.find(id=f'{banner_status}').parent.next_siblings
+        status_content = source.find(id=f'{banner_status}')
 
-        for banner_html in banners:
+        if status_content:
+            banners = status_content.parent.next_siblings
 
-            if not banner_html or banner_html == "\n" or banner_html == " ":
-                continue
+            for banner_html in banners:
 
-            else:
-                return self.banners_table_to_dict(banner_html, banner_status)
+                if not banner_html or banner_html == "\n" or banner_html == " ":
+                    continue
+
+                else:
+                    return self.banners_table_to_dict(banner_html, banner_status)
 
         return []
 
