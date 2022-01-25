@@ -1,181 +1,217 @@
 {
     "banners": [
         {
-            "name": "Secretum Secretorum",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Secretum_Secretorum/2021-11-24",
-            "url_official": null,
+            "name": "The Transcendent One Returns",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/The_Transcendent_One_Returns/2022-01-05",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/18155",
             "status": "Current",
             "wish_type": "Character",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Wish_Secretum_Secretorum_2021-11-24.png/revision/latest?cb=20211122040308",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Wish_The_Transcendent_One_Returns_2022-01-05.png/revision/latest?cb=20211231040701",
             "start": [
                 {
-                    "datetime": "2021-11-24T11:00:00+08:00",
+                    "datetime": "2022-01-05T11:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-11-24T04:00:00+01:00",
+                    "datetime": "2022-01-05T04:00:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-11-23T22:00:00-05:00",
+                    "datetime": "2022-01-04T22:00:00-05:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2021-12-14T17:59:59+08:00",
+                    "datetime": "2022-01-25T17:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-12-14T17:59:59+01:00",
+                    "datetime": "2022-01-25T17:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-12-14T17:59:59-05:00",
+                    "datetime": "2022-01-25T17:59:59-05:00",
                     "region": "north_america"
                 }
             ]
         },
         {
             "name": "Epitome Invocation",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2021-11-24",
-            "url_official": null,
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2022-01-05",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/18162",
             "status": "Current",
             "wish_type": "Weapon",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Wish_Epitome_Invocation_2021-11-24.png/revision/latest?cb=20211122040310",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Wish_Epitome_Invocation_2022-01-05.png/revision/latest?cb=20211231040706",
             "start": [
                 {
-                    "datetime": "2021-11-24T11:00:00+08:00",
+                    "datetime": "2022-01-05T11:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-11-24T04:00:00+01:00",
+                    "datetime": "2022-01-05T04:00:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-11-23T22:00:00-05:00",
+                    "datetime": "2022-01-04T22:00:00-05:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2021-12-14T17:59:59+08:00",
+                    "datetime": "2022-01-25T17:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-12-14T17:59:59+01:00",
+                    "datetime": "2022-01-25T17:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-12-14T17:59:59-05:00",
+                    "datetime": "2022-01-25T17:59:59-05:00",
                     "region": "north_america"
                 }
             ]
         },
         {
-            "name": "Born of Ocean Swell",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Born_of_Ocean_Swell/2021-11-24",
-            "url_official": null,
+            "name": "Invitation to Mundane Life",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Invitation_to_Mundane_Life/2022-01-05",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/18158",
             "status": "Current",
             "wish_type": "Character",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/4/41/Wish_Born_of_Ocean_Swell_2021-11-24.png/revision/latest?cb=20211122040306",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Wish_Invitation_to_Mundane_Life_2022-01-05.png/revision/latest?cb=20211231040704",
             "start": [
                 {
-                    "datetime": "2021-11-24T11:00:00+08:00",
+                    "datetime": "2022-01-05T11:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-11-24T04:00:00+01:00",
+                    "datetime": "2022-01-05T04:00:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-11-23T22:00:00-05:00",
+                    "datetime": "2022-01-04T22:00:00-05:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2021-12-14T17:59:59+08:00",
+                    "datetime": "2022-01-25T17:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-12-14T17:59:59+01:00",
+                    "datetime": "2022-01-25T17:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-12-14T17:59:59-05:00",
+                    "datetime": "2022-01-25T17:59:59-05:00",
                     "region": "north_america"
                 }
             ]
         },
         {
-            "name": "Oni's Royale",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Oni%27s_Royale/2021-12-14",
-            "url_official": null,
-            "status": "Current",
+            "name": "Gentry of Hermitage",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Gentry_of_Hermitage/2022-01-25",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/18160",
+            "status": "Upcoming",
             "wish_type": "Character",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/3b/Wish_Oni%27s_Royale_2021-12-14.png/revision/latest?cb=20211211040245",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Wish_Gentry_of_Hermitage_2022-01-25.png/revision/latest?cb=20211231040708",
             "start": [
                 {
-                    "datetime": "2021-12-15T01:00:00+08:00",
+                    "datetime": "2022-01-26T01:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-12-14T18:00:00+01:00",
+                    "datetime": "2022-01-25T18:00:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-12-14T12:00:00-05:00",
+                    "datetime": "2022-01-25T12:00:00-05:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2022-01-04T14:59:59+08:00",
+                    "datetime": "2022-02-15T14:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2022-01-04T14:59:59+01:00",
+                    "datetime": "2022-02-15T14:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2022-01-04T14:59:59-05:00",
+                    "datetime": "2022-02-15T14:59:59-05:00",
                     "region": "north_america"
                 }
             ]
         },
         {
             "name": "Epitome Invocation",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2021-12-14",
-            "url_official": null,
-            "status": "Current",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2022-01-25",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/18163",
+            "status": "Upcoming",
             "wish_type": "Weapon",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/6/6c/Wish_Epitome_Invocation_2021-12-14.png/revision/latest?cb=20211211040246",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Wish_Epitome_Invocation_2022-01-25.png/revision/latest?cb=20211231040712",
             "start": [
                 {
-                    "datetime": "2021-12-15T01:00:00+08:00",
+                    "datetime": "2022-01-26T01:00:00+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2021-12-14T18:00:00+01:00",
+                    "datetime": "2022-01-25T18:00:00+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2021-12-14T12:00:00-05:00",
+                    "datetime": "2022-01-25T12:00:00-05:00",
                     "region": "north_america"
                 }
             ],
             "end": [
                 {
-                    "datetime": "2022-01-04T14:59:59+08:00",
+                    "datetime": "2022-02-15T14:59:59+08:00",
                     "region": "asia"
                 },
                 {
-                    "datetime": "2022-01-04T14:59:59+01:00",
+                    "datetime": "2022-02-15T14:59:59+01:00",
                     "region": "europe"
                 },
                 {
-                    "datetime": "2022-01-04T14:59:59-05:00",
+                    "datetime": "2022-02-15T14:59:59-05:00",
+                    "region": "north_america"
+                }
+            ]
+        },
+        {
+            "name": "Adrift in the Harbor",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Adrift_in_the_Harbor/2022-01-25",
+            "url_official": "https://genshin.mihoyo.com/en/news/detail/18161",
+            "status": "Upcoming",
+            "wish_type": "Character",
+            "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Wish_Adrift_in_the_Harbor_2022-01-25.png/revision/latest?cb=20211231040710",
+            "start": [
+                {
+                    "datetime": "2022-01-26T01:00:00+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2022-01-25T18:00:00+01:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2022-01-25T12:00:00-05:00",
+                    "region": "north_america"
+                }
+            ],
+            "end": [
+                {
+                    "datetime": "2022-02-15T14:59:59+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2022-02-15T14:59:59+01:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2022-02-15T14:59:59-05:00",
                     "region": "north_america"
                 }
             ]

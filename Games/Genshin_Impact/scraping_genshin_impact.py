@@ -295,12 +295,12 @@ class GenshinImpact:
         date_format = r'(\w+\s\d{1,2},\s\d{4}\s(?:\d{2}:?)+(?:\w|\s|\+|-)*)'
 
         for element in event_body:
+
             if "Duration:" in element.get_text():
                 duration = [possible_duration for possible_duration in element.get_text().split('\n')
                             if possible_duration.startswith("Duration:")]
-                continue
             if "Official announcement" in element.get_text():
-                official_url = element.a.get('href')
+                official_url = element.find('a', text="Official announcement").get('href')
             if element.find("a", {"class": "image"}):
                 image = element.find("a", {"class": "image"}).get('href')
 
