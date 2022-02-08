@@ -312,10 +312,10 @@ class GenshinImpact:
 
             banner_data.set_start_time(start, start_format)
 
-            end = normalize_datetime_offset(matches[1])
-            end_format = get_datetime_format(matches[1])
-
-            banner_data.set_end_time(end, end_format)
+            if len(matches) > 1:
+                end = normalize_datetime_offset(matches[1])
+                end_format = get_datetime_format(matches[1])
+                banner_data.set_end_time(end, end_format)
 
         banner_data.image = image
         banner_data.url_official = official_url
