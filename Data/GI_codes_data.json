@@ -1,13 +1,22 @@
 {
     "codes": [
         {
-            "promotional_code": "Prime Gaming",
-            "external_link": "https://gaming.amazon.com/loot/genshinimpact",
+            "promotional_code": "9BPCJCQGHAWZ",
+            "external_link": null,
             "server": "All",
-            "rewards": [],
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "60"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "5"
+                }
+            ],
             "status": "Active",
-            "start": "July 26, 2021",
-            "end": "January 5, 2022"
+            "start": "January 5, 2022",
+            "end": null
         },
         {
             "promotional_code": "GENSHINGIFT",
@@ -28,6 +37,82 @@
             "end": null
         },
         {
+            "promotional_code": "VTPU3CQWYCSD",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "February 4, 2022",
+            "end": "February 5, 2022"
+        },
+        {
+            "promotional_code": "AB7VJC9EGDAZ",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "February 4, 2022",
+            "end": "February 5, 2022"
+        },
+        {
+            "promotional_code": "WT7D3CQEHVBM",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "February 4, 2022",
+            "end": "February 5, 2022"
+        },
+        {
+            "promotional_code": "FANRONGCHANGSHENG",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Mora",
+                    "quantity": "18000"
+                },
+                {
+                    "item_name": "Adventurer's Experience",
+                    "quantity": "8"
+                },
+                {
+                    "item_name": "Fine Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "January 24, 2022",
+            "end": "January 30, 2022"
+        },
+        {
             "promotional_code": "ETNU2DN5NZRR",
             "external_link": null,
             "server": "All",
@@ -41,9 +126,100 @@
                     "quantity": "4"
                 }
             ],
-            "status": "Active",
+            "status": "Expired",
             "start": "November 25, 2021",
-            "end": null
+            "end": "January 5, 2022"
+        },
+        {
+            "promotional_code": "CrucialGames(2.3 Giveaway)",
+            "external_link": "https://games.crucial.com/promotions/2077059945/genshin-impact-v23-50-primogems-giveaway",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "December 22, 2021",
+            "end": "January 5, 2022"
+        },
+        {
+            "promotional_code": "Prime Gaming",
+            "external_link": "https://gaming.amazon.com/loot/genshinimpact",
+            "server": "All",
+            "rewards": [],
+            "status": "Expired",
+            "start": "July 26, 2021",
+            "end": "January 5, 2022"
+        },
+        {
+            "promotional_code": "5SPDKV8ZHBFV",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mora",
+                    "quantity": "50000"
+                }
+            ],
+            "status": "Expired",
+            "start": "December 26, 2021",
+            "end": "December 27, 2021"
+        },
+        {
+            "promotional_code": "PSNVJURZZSD9",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Hero's Wit",
+                    "quantity": "5"
+                }
+            ],
+            "status": "Expired",
+            "start": "December 26, 2021",
+            "end": "December 27, 2021"
+        },
+        {
+            "promotional_code": "SA7V2DRZGAU5",
+            "external_link": null,
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "100"
+                },
+                {
+                    "item_name": "Mystic Enhancement Ore",
+                    "quantity": "10"
+                }
+            ],
+            "status": "Expired",
+            "start": "December 26, 2021",
+            "end": "December 27, 2021"
+        },
+        {
+            "promotional_code": "Steelseries(2.3 Giveaway)",
+            "external_link": "https://games.steelseries.com/giveaway/628811152/genshin-impact-v23-50-primogems-giveaway",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "November 27, 2021",
+            "end": "November 29, 2021"
         },
         {
             "promotional_code": "BSPD3ZRXU985",
@@ -118,7 +294,7 @@
             "end": "November 13, 2021"
         },
         {
-            "promotional_code": "CrucialGames (Giveaway)",
+            "promotional_code": "CrucialGames(2.1 Giveaway)",
             "external_link": "https://games.crucial.com/promotions/1545757312/genshin-impact-anniversary-celebration-50-primogems-key-giveaway-v21",
             "server": "All",
             "rewards": [
@@ -186,7 +362,7 @@
             "end": "October 4, 2021"
         },
         {
-            "promotional_code": "Alienware (Giveaway)",
+            "promotional_code": "Alienware(2.1 Giveaway)",
             "external_link": "https://na.alienwarearena.com/ucf/show/2157343/boards/contest-and-giveaways-global/Giveaway/genshin-impact-anniversary-celebration-50-primogems-key-giveaway-v2-1",
             "server": "All",
             "rewards": [
@@ -200,7 +376,7 @@
             "end": "October 3, 2021"
         },
         {
-            "promotional_code": "Steelseries (Giveaway)",
+            "promotional_code": "Steelseries(2.1 Giveaway)",
             "external_link": "https://games.steelseries.com/giveaway/80692181/genshin-impact-v21-50-primogems-giveaway",
             "server": "All",
             "rewards": [
@@ -214,7 +390,7 @@
             "end": "September 27, 2021"
         },
         {
-            "promotional_code": "Intel gaming access (Giveaway)",
+            "promotional_code": "Intel gaming access (2.1 Giveaway)",
             "external_link": "https://game.intel.com/ww/giveaways/genshin-impact-v21-50-primogems-giveaway",
             "server": "All",
             "rewards": [
@@ -296,7 +472,7 @@
             "end": "August 21, 2021"
         },
         {
-            "promotional_code": "CrucialGames (Giveaway)",
+            "promotional_code": "CrucialGames(1.6 Giveaway)",
             "external_link": "https://games.crucial.com/promotions/2140546853/genshin-impact-50-primogems-v16-giveaway",
             "server": "All",
             "rewards": [
@@ -308,6 +484,20 @@
             "status": "Expired",
             "start": "July 12, 2021",
             "end": "July 25, 2021"
+        },
+        {
+            "promotional_code": "Steelseries(1.6 Giveaway)",
+            "external_link": "https://games.steelseries.com/giveaway/1746958926/genshin-impact-v16-50-primogems-giveaway",
+            "server": "All",
+            "rewards": [
+                {
+                    "item_name": "Primogem",
+                    "quantity": "50"
+                }
+            ],
+            "status": "Expired",
+            "start": "June 25, 2021",
+            "end": "July 21, 2021"
         },
         {
             "promotional_code": "GENSHINGALAXY",
@@ -422,20 +612,6 @@
             "status": "Expired",
             "start": "July 9, 2021",
             "end": "July 10, 2021"
-        },
-        {
-            "promotional_code": "Steelseries (Giveaway)",
-            "external_link": "https://games.steelseries.com/giveaway/1746958926/genshin-impact-v16-50-primogems-giveaway",
-            "server": "All",
-            "rewards": [
-                {
-                    "item_name": "Primogem",
-                    "quantity": "50"
-                }
-            ],
-            "status": "Expired",
-            "start": "June 25, 2021",
-            "end": "July 21, 2021"
         },
         {
             "promotional_code": "SBNBUK67M37Z",

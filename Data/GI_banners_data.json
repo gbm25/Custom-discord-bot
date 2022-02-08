@@ -1,118 +1,10 @@
 {
     "banners": [
         {
-            "name": "The Transcendent One Returns",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/The_Transcendent_One_Returns/2022-01-05",
-            "url_official": "https://genshin.mihoyo.com/en/news/detail/18155",
-            "status": "Current",
-            "wish_type": "Character",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cc/Wish_The_Transcendent_One_Returns_2022-01-05.png/revision/latest?cb=20211231040701",
-            "start": [
-                {
-                    "datetime": "2022-01-05T11:00:00+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2022-01-05T04:00:00+01:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2022-01-04T22:00:00-05:00",
-                    "region": "north_america"
-                }
-            ],
-            "end": [
-                {
-                    "datetime": "2022-01-25T17:59:59+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2022-01-25T17:59:59+01:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2022-01-25T17:59:59-05:00",
-                    "region": "north_america"
-                }
-            ]
-        },
-        {
-            "name": "Epitome Invocation",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2022-01-05",
-            "url_official": "https://genshin.mihoyo.com/en/news/detail/18162",
-            "status": "Current",
-            "wish_type": "Weapon",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Wish_Epitome_Invocation_2022-01-05.png/revision/latest?cb=20211231040706",
-            "start": [
-                {
-                    "datetime": "2022-01-05T11:00:00+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2022-01-05T04:00:00+01:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2022-01-04T22:00:00-05:00",
-                    "region": "north_america"
-                }
-            ],
-            "end": [
-                {
-                    "datetime": "2022-01-25T17:59:59+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2022-01-25T17:59:59+01:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2022-01-25T17:59:59-05:00",
-                    "region": "north_america"
-                }
-            ]
-        },
-        {
-            "name": "Invitation to Mundane Life",
-            "url_fandom": "https://genshin-impact.fandom.com/wiki/Invitation_to_Mundane_Life/2022-01-05",
-            "url_official": "https://genshin.mihoyo.com/en/news/detail/18158",
-            "status": "Current",
-            "wish_type": "Character",
-            "image": "https://static.wikia.nocookie.net/gensin-impact/images/e/e2/Wish_Invitation_to_Mundane_Life_2022-01-05.png/revision/latest?cb=20211231040704",
-            "start": [
-                {
-                    "datetime": "2022-01-05T11:00:00+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2022-01-05T04:00:00+01:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2022-01-04T22:00:00-05:00",
-                    "region": "north_america"
-                }
-            ],
-            "end": [
-                {
-                    "datetime": "2022-01-25T17:59:59+08:00",
-                    "region": "asia"
-                },
-                {
-                    "datetime": "2022-01-25T17:59:59+01:00",
-                    "region": "europe"
-                },
-                {
-                    "datetime": "2022-01-25T17:59:59-05:00",
-                    "region": "north_america"
-                }
-            ]
-        },
-        {
             "name": "Gentry of Hermitage",
             "url_fandom": "https://genshin-impact.fandom.com/wiki/Gentry_of_Hermitage/2022-01-25",
             "url_official": "https://genshin.mihoyo.com/en/news/detail/18160",
-            "status": "Upcoming",
+            "status": "Current",
             "wish_type": "Character",
             "image": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Wish_Gentry_of_Hermitage_2022-01-25.png/revision/latest?cb=20211231040708",
             "start": [
@@ -148,7 +40,7 @@
             "name": "Epitome Invocation",
             "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2022-01-25",
             "url_official": "https://genshin.mihoyo.com/en/news/detail/18163",
-            "status": "Upcoming",
+            "status": "Current",
             "wish_type": "Weapon",
             "image": "https://static.wikia.nocookie.net/gensin-impact/images/1/1e/Wish_Epitome_Invocation_2022-01-25.png/revision/latest?cb=20211231040712",
             "start": [
@@ -184,7 +76,7 @@
             "name": "Adrift in the Harbor",
             "url_fandom": "https://genshin-impact.fandom.com/wiki/Adrift_in_the_Harbor/2022-01-25",
             "url_official": "https://genshin.mihoyo.com/en/news/detail/18161",
-            "status": "Upcoming",
+            "status": "Current",
             "wish_type": "Character",
             "image": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Wish_Adrift_in_the_Harbor_2022-01-25.png/revision/latest?cb=20211231040710",
             "start": [
@@ -215,6 +107,82 @@
                     "region": "north_america"
                 }
             ]
+        },
+        {
+            "name": "Everbloom Violet",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Everbloom_Violet/2022-02-16",
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Character",
+            "image": null,
+            "start": [
+                {
+                    "datetime": "2022-02-16T11:00:00+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2022-02-16T04:00:00+01:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2022-02-15T22:00:00-05:00",
+                    "region": "north_america"
+                }
+            ],
+            "end": []
+        },
+        {
+            "name": "Epitome Invocation",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2022-02-16",
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Weapon",
+            "image": null,
+            "start": [
+                {
+                    "datetime": "2022-02-16T11:00:00+08:00",
+                    "region": "asia"
+                },
+                {
+                    "datetime": "2022-02-16T04:00:00+01:00",
+                    "region": "europe"
+                },
+                {
+                    "datetime": "2022-02-15T22:00:00-05:00",
+                    "region": "north_america"
+                }
+            ],
+            "end": []
+        },
+        {
+            "name": "Reign of Serenity Version 2.5",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Reign_of_Serenity/2.5",
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Character",
+            "image": null,
+            "start": [],
+            "end": []
+        },
+        {
+            "name": "Epitome Invocation 2.5",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Epitome_Invocation/2.5",
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Weapon",
+            "image": null,
+            "start": [],
+            "end": []
+        },
+        {
+            "name": "Drifting Luminescence Version 2.5",
+            "url_fandom": "https://genshin-impact.fandom.com/wiki/Drifting_Luminescence/2.5",
+            "url_official": null,
+            "status": "Upcoming",
+            "wish_type": "Character",
+            "image": null,
+            "start": [],
+            "end": []
         }
     ]
 }
